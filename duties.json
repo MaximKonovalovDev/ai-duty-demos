@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "note": "Generated file. Do not edit by hand.",
+  "duties": [
+    {
+      "name": "abuse-analyst",
+      "what": "Finds bot and abuse signals in a request log: bursts no human reaches, sweeps, machine rhythm.",
+      "demo": "duties/abuse-analyst/"
+    },
+    {
+      "name": "agent-builder",
+      "what": "Turns a repeated job into an agent or MCP server that someone else can run: a skill card and a bounded runner.",
+      "demo": "duties/agent-builder/"
+    },
+    {
+      "name": "bug-triage",
+      "what": "Fingerprints and clusters the errors in a log, separates new from known, files repro-ready findings.",
+      "demo": "duties/bug-triage/"
+    },
+    {
+      "name": "campaign-builder",
+      "what": "Builds marketing campaigns as files only; every link carries UTM tags; it never posts or sends.",
+      "demo": "duties/campaign-builder/"
+    },
+    {
+      "name": "data-cleaner",
+      "what": "Finds exact and near duplicates and missing fields in a messy dataset, and writes a clean file.",
+      "demo": "duties/data-cleaner/"
+    },
+    {
+      "name": "design-reviewer",
+      "what": "Reviews a page before it ships: accessibility gaps and design-token problems.",
+      "demo": "duties/design-reviewer/"
+    },
+    {
+      "name": "doc-writer",
+      "what": "Turns technical work into documentation someone else can follow: plain words, short lines.",
+      "demo": "duties/doc-writer/"
+    },
+    {
+      "name": "eval-harness",
+      "what": "Scores AI answers against a rubric over many runs, measures consistency, and flags a statistically real drop against a baseline.",
+      "demo": "duties/eval-harness/"
+    },
+    {
+      "name": "gate-builder",
+      "what": "Writes a local gate script for any repo (detects its tests, runs them, ratchets the test count so it can only go up); no hosted CI.",
+      "demo": "duties/gate-builder/"
+    },
+    {
+      "name": "qa-web-tester",
+      "what": "Drives a real browser over a page and files console errors, bad requests, broken links, missing labels and RTL overflow.",
+      "demo": "duties/qa-web-tester/"
+    },
+    {
+      "name": "repo-rag",
+      "what": "Answers which file says X, with BM25 ranking and no model.",
+      "demo": "duties/repo-rag/"
+    },
+    {
+      "name": "sprint-producer",
+      "what": "Turns a roadmap into backlog rows; each row has an owner and a plain definition of done.",
+      "demo": "duties/sprint-producer/"
+    },
+    {
+      "name": "test-planner",
+      "what": "Turns a requirement list into test cases (happy, negative, boundary, regression) and flags requirements nobody can test.",
+      "demo": "duties/test-planner/"
+    }
+  ]
+}

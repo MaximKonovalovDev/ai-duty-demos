@@ -27,21 +27,23 @@ or `node scripts/test-all.mjs`, or one duty: `node duties/bug-triage/test.mjs`.
 
 ## The duties
 
-| Duty | What it does |
-|---|---|
-| `abuse-analyst` | Finds bot and abuse signals in a request log: bursts no human reaches, sweeps, machine rhythm. |
-| `agent-builder` | Turns a repeated job into an agent or MCP server that someone else can run: a skill card and a bounded runner. |
-| `bug-triage` | Reads failure logs, separates real, repeated and new problems, and writes each up so an engineer can reproduce it. |
-| `campaign-builder` | Builds marketing campaigns as files only. Every link carries UTM tags. It never posts or sends. |
-| `data-cleaner` | Finds exact and near duplicates and missing fields in a messy dataset, and writes a clean file. |
-| `design-reviewer` | Reviews a page before it ships: accessibility gaps and design-token problems. |
-| `doc-writer` | Turns technical work into documentation someone else can follow: plain words, short lines. |
-| `eval-harness` | Measures an AI whose answers change from run to run: score against a rubric, consistency, pass or fail, and real regression versus noise. |
-| `gate-builder` | Builds a local quality gate with a ratchet: counts may only go down. |
-| `qa-web-tester` | Tests a page in a real browser and files what is broken: console errors, bad links, inputs without labels, sideways scrolling, missing `lang`, `dir` or title. |
-| `repo-rag` | Answers "which file says X" with BM25 ranking and no model. |
-| `sprint-producer` | Turns a roadmap into backlog rows. Each row has an owner and a plain definition of done. |
-| `test-planner` | Turns requirements into a test plan: cases, edge values, regression checks, and a list of requirements nobody can test. |
+<!-- duties:start -->
+| Duty | What it does | Demo |
+|---|---|---|
+| `abuse-analyst` | Finds bot and abuse signals in a request log: bursts no human reaches, sweeps, machine rhythm. | [`duties/abuse-analyst/`](duties/abuse-analyst/) |
+| `agent-builder` | Turns a repeated job into an agent or MCP server that someone else can run: a skill card and a bounded runner. | [`duties/agent-builder/`](duties/agent-builder/) |
+| `bug-triage` | Fingerprints and clusters the errors in a log, separates new from known, files repro-ready findings. | [`duties/bug-triage/`](duties/bug-triage/) |
+| `campaign-builder` | Builds marketing campaigns as files only; every link carries UTM tags; it never posts or sends. | [`duties/campaign-builder/`](duties/campaign-builder/) |
+| `data-cleaner` | Finds exact and near duplicates and missing fields in a messy dataset, and writes a clean file. | [`duties/data-cleaner/`](duties/data-cleaner/) |
+| `design-reviewer` | Reviews a page before it ships: accessibility gaps and design-token problems. | [`duties/design-reviewer/`](duties/design-reviewer/) |
+| `doc-writer` | Turns technical work into documentation someone else can follow: plain words, short lines. | [`duties/doc-writer/`](duties/doc-writer/) |
+| `eval-harness` | Scores AI answers against a rubric over many runs, measures consistency, and flags a statistically real drop against a baseline. | [`duties/eval-harness/`](duties/eval-harness/) |
+| `gate-builder` | Writes a local gate script for any repo (detects its tests, runs them, ratchets the test count so it can only go up); no hosted CI. | [`duties/gate-builder/`](duties/gate-builder/) |
+| `qa-web-tester` | Drives a real browser over a page and files console errors, bad requests, broken links, missing labels and RTL overflow. | [`duties/qa-web-tester/`](duties/qa-web-tester/) |
+| `repo-rag` | Answers which file says X, with BM25 ranking and no model. | [`duties/repo-rag/`](duties/repo-rag/) |
+| `sprint-producer` | Turns a roadmap into backlog rows; each row has an owner and a plain definition of done. | [`duties/sprint-producer/`](duties/sprint-producer/) |
+| `test-planner` | Turns a requirement list into test cases (happy, negative, boundary, regression) and flags requirements nobody can test. | [`duties/test-planner/`](duties/test-planner/) |
+<!-- duties:end -->
 
 ## What is in each folder
 
