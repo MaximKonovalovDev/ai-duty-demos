@@ -1,0 +1,23 @@
+{
+  "duty": "doc-writer",
+  "date": "2026-10-04T07:07:30.966Z",
+  "command": "node duties/doc-writer/run.mjs --real",
+  "target": {
+    "kind": "doc",
+    "path": "team/fetch.md",
+    "sha256": "6051116f9ff05b88"
+  },
+  "numbers": {
+    "lines": 9,
+    "checks": 3,
+    "defects": 2,
+    "defect_long_line": 2
+  },
+  "summary": "real doc team/fetch.md: 9 lines, 3 checks, 2 defect(s): long-line",
+  "tests": {
+    "file": "duties/doc-writer/test.mjs",
+    "passed": true,
+    "count": 10
+  },
+  "sourceHash": "f1f9b9080e5dc779cb4a5e0f"
+}

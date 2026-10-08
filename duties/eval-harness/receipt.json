@@ -1,0 +1,28 @@
+{
+  "duty": "eval-harness",
+  "date": "2026-10-04T01:00:17.743Z",
+  "command": "node duties/eval-harness/run.mjs --real",
+  "target": {
+    "kind": "dir",
+    "path": "sprint/queue/done",
+    "note": "the judge replies our loops already produced (local queue records), scored against the judge reply contract; names and text stay out of the receipt"
+  },
+  "numbers": {
+    "replies": 20,
+    "passed": 18,
+    "ratePct": 90,
+    "ciLowPct": 70,
+    "ciHighPct": 97,
+    "olderRatePct": 100,
+    "newerRatePct": 80,
+    "regression": false,
+    "fail_revert_line": 2
+  },
+  "summary": "real judge replies: 18 of 20 meet the whole contract (90%, 95% interval 70-97%); older half 100%, newer half 80%: no significant change; most missed check: revert-line",
+  "tests": {
+    "file": "duties/eval-harness/test.mjs",
+    "passed": true,
+    "count": 6
+  },
+  "sourceHash": "ee50506c6ef14cdefa4d6d58"
+}

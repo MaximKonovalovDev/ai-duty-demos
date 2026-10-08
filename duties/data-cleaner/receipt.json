@@ -1,0 +1,22 @@
+{
+  "duty": "data-cleaner",
+  "date": "2026-10-04T09:03:53.671Z",
+  "command": "node duties/data-cleaner/run.mjs --real",
+  "target": {
+    "kind": "dataset",
+    "path": "data/jobs.jsonl",
+    "sha256": "0f6b80a3b77e807e"
+  },
+  "numbers": {
+    "rows": 6543,
+    "defects": 903,
+    "defect_near_dupe": 903
+  },
+  "summary": "real dataset data/jobs.jsonl: 6543 rows, 5 checks, 903 defect(s): near-dupe",
+  "tests": {
+    "file": "duties/data-cleaner/test.mjs",
+    "passed": true,
+    "count": 11
+  },
+  "sourceHash": "d7daa7c3127b909c44557f7e"
+}

@@ -1,0 +1,8 @@
+id,name,email,age
+1,Ada Lovelace,ada@example.com,36
+1,Ada Lovelace,ada@example.com,36
+3,Ada Lovelace,ADA@example.com,36
+4,,bob@example.com,40
+5,Eve Adams,not-an-email,28
+6,Mallory Gray,mallory@example.com,999
+7,Grace Hopper,grace@example.com,85

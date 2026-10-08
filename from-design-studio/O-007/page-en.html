@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- designs/O-007/page-en.html: one A4 page CV layout, EN LTR twin. Slots (data-slot): header.kicker, header.name, header.headline, header.contact, summary.text, stack.items, proofs.items, role-fit.items, next-learning.items, next-learning.status. Placeholders only, no personal data. Real text only, one column, no text in images. Color and type only via tokens.css. Styles are cv.css inlined. Print: Edge headless to PDF. -->
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CV</title>
+<link rel="stylesheet" href="tokens.css">
+<style>
+  /* O-007 CV layout, one A4 page. Class names match jobhunt's cv-render (page, kicker, h1, tagline, h2, job, job-head, role, years, desc, skills, pill, langs, contact). Logical properties only; color and type only through tokens.css. */
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    width: 210mm; min-height: 297mm;
+    background: var(--paper); color: var(--ink);
+    font-family: var(--font-body); font-size: calc(14px * var(--scale, 1)); line-height: 1.55;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  html[lang="he"] body { font-family: var(--font-hebrew); }
+  .page { width: 210mm; min-height: 296mm; padding-inline: 17mm; padding-block-end: 12mm; border-block-start: 7px solid var(--accent); display: flex; flex-direction: column; }
+  header { padding-block: 14mm 5mm; border-block-end: 1px solid var(--line); }
+  .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); margin-block-end: 5px; }
+  html[lang="he"] .kicker { letter-spacing: 0.04em; font-size: 13px; }
+  h1 { font-family: var(--font-display); font-size: calc(46px * var(--scale, 1)); line-height: 1.1; font-weight: 800; color: var(--ink); margin-block-end: 4px; }
+  html[lang="he"] h1 { font-family: var(--font-hebrew); font-weight: 700; }
+  html[lang="he"] h2, html[lang="he"] .role, html[lang="he"] .langs { font-weight: 700; }
+  .tagline { font-size: calc(19px * var(--scale, 1)); line-height: 1.3; color: var(--muted); font-weight: 600; margin-block-end: 8px; }
+  .contact { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .contact span + span::before { content: "\00b7"; margin-inline-end: 16px; color: var(--accent); font-weight: 800; }
+  section { margin-block-start: calc(16px * var(--scale, 1)); }
+  h2 { font-size: calc(16.5px * var(--scale, 1)); line-height: 1.2; color: var(--accent); font-weight: 800; border-block-end: 1.5px solid var(--line); padding-block-end: 3px; margin-block-end: 7px; }
+  html[lang="en"] h2 { font-size: calc(13px * var(--scale, 1)); letter-spacing: 0.12em; text-transform: uppercase; }
+  .summary { font-size: calc(14.6px * var(--scale, 1)); line-height: 1.6; color: var(--ink); }
+  .skills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill { font-size: calc(13.2px * var(--scale, 1)); line-height: 1.3; color: var(--ink); background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding-block: 2px; padding-inline: 9px; }
+  .job { border-inline-start: 3px solid var(--accent); padding-inline-start: 11px; margin-block-end: calc(8px * var(--scale, 1)); }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .role { font-size: calc(14.4px * var(--scale, 1)); font-weight: 800; color: var(--ink); }
+  .years { font-size: calc(12.6px * var(--scale, 1)); color: var(--muted); }
+  .desc { font-size: calc(13.6px * var(--scale, 1)); line-height: 1.5; color: var(--muted); }
+  .learn { list-style: none; }
+  .learn li { font-size: calc(13.6px * var(--scale, 1)); color: var(--muted); padding-inline-start: 14px; position: relative; margin-block-end: 3px; }
+  .learn li::before { content: ""; position: absolute; inset-inline-start: 0; inset-block-start: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .langs { font-size: calc(13.6px * var(--scale, 1)); color: var(--ink); font-weight: 700; margin-block-start: 4px; }
+  a { color: inherit; text-decoration: none; }
+  bdi { unicode-bidi: isolate; }
+  @media screen { body { margin-inline: auto; box-shadow: 0 0 0 1px var(--line); } }
+  @media print { html, body { background: var(--paper); } body { box-shadow: none; } }
+</style>
+</head>
+<body data-oid="cv.page">
+  <div class="page">
+    <header data-slot="header">
+      <div class="kicker" data-slot="header.kicker">[City] · [Target role]</div>
+      <h1 data-slot="header.name">[Full name]</h1>
+      <p class="tagline" data-slot="header.headline">[One professional headline: what I do and with what]</p>
+      <div class="contact" data-slot="header.contact"><span><a href="mailto:[email]">[email]</a></span><span>[phone]</span><span><a href="[profile-url]">[profile-url]</a></span><span>[City, Country]</span></div>
+    </header>
+    <section data-slot="summary"><h2>Summary</h2><p class="summary" data-slot="summary.text">[Summary in two or three sentences: what I do, what I am strong at, and what I look for in this role. No empty titles, only what can be proven.]</p></section>
+    <section data-slot="stack"><h2>Stack</h2><div class="skills" data-slot="stack.items"><span class="pill">[Tool 1]</span><span class="pill">[Tool 2]</span><span class="pill">[Tool 3]</span><span class="pill">[Tool 4]</span><span class="pill">[Tool 5]</span><span class="pill">[Tool 6]</span><span class="pill">[Tool 7]</span><span class="pill">[Tool 8]</span><span class="pill">[Tool 9]</span><span class="pill">[Tool 10]</span><span class="pill">[Tool 11]</span><span class="pill">[Tool 12]</span></div></section>
+    <section data-slot="proofs"><h2>Proofs</h2>
+      <div data-slot="proofs.items">
+      <div class="job"><div class="job-head"><span class="role">[Project 1]</span><span class="years">[Year or metric]</span></div><p class="desc">[One sentence: what was built, how it was proven, one number.]</p></div>
+      <div class="job"><div class="job-head"><span class="role">[Project 2]</span><span class="years">[Year or metric]</span></div><p class="desc">[One sentence: what was built, how it was proven, one number.]</p></div>
+      <div class="job"><div class="job-head"><span class="role">[Project 3]</span><span class="years">[Year or metric]</span></div><p class="desc">[One sentence: what was built, how it was proven, one number.]</p></div>
+      <div class="job"><div class="job-head"><span class="role">[Project 4]</span><span class="years">[Year or metric]</span></div><p class="desc">[One sentence: what was built, how it was proven, one number.]</p></div>
+      <div class="job"><div class="job-head"><span class="role">[Project 5]</span><span class="years">[Year or metric]</span></div><p class="desc">[One sentence: what was built, how it was proven, one number.]</p></div>
+      </div>
+    </section>
+    <section data-slot="role-fit"><h2>Role fit</h2>
+      <div data-slot="role-fit.items">
+      <div class="job"><div class="job-head"><span class="role">Score</span><span class="years">[0 to 100]</span></div><p class="desc">[The number and the three reasons behind it, as the match tool computed it]</p></div>
+      <div class="job"><div class="job-head"><span class="role">Matches</span></div><p class="desc">[My abilities that fit the role, with one proof for each]</p></div>
+      <div class="job"><div class="job-head"><span class="role">Gaps to close</span></div><p class="desc">[What I honestly lack and how I will close it]</p></div>
+      </div>
+    </section>
+    <section data-slot="next-learning"><h2>Next learning</h2><ul class="learn" data-slot="next-learning.items"><li>[Topic 1]: [why it matters for the role and when I will learn it]</li><li>[Topic 2]: [why it matters for the role and when I will learn it]</li><li>[Topic 3]: [why it matters for the role and when I will learn it]</li></ul><p class="langs" data-slot="next-learning.status">Status: [draft / waiting for approval]</p></section>
+  </div>
+</body>
+</html>

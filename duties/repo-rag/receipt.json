@@ -1,0 +1,23 @@
+{
+  "duty": "repo-rag",
+  "date": "2026-10-04T08:11:52.079Z",
+  "command": "node duties/repo-rag/run.mjs --real",
+  "target": {
+    "kind": "retrieval",
+    "path": "tools",
+    "sha256": "b316f0f0258fac21"
+  },
+  "numbers": {
+    "files": 24,
+    "terms": 3816,
+    "queries": 3,
+    "top1": 3
+  },
+  "summary": "real repo tools/: 24 files, 3816 terms, 3 reference queries, 3 at rank 1",
+  "tests": {
+    "file": "duties/repo-rag/test.mjs",
+    "passed": true,
+    "count": 9
+  },
+  "sourceHash": "2c3422f4c590db543cd2566a"
+}

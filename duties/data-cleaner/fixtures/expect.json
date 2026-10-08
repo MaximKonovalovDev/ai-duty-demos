@@ -1,0 +1,17 @@
+{
+  "planted": {
+    "dir": "planted",
+    "file": "dataset.csv",
+    "rows": 7,
+    "defects": 5,
+    "kinds": ["bad-email", "exact-dupe", "missing-field", "near-dupe", "out-of-range"],
+    "note": "7 applicant rows with 5 planted defects: row 2 exact copy of row 1, row 3 same email in other case (near, not exact), row 4 missing name, row 5 bad email, row 6 age 999."
+  },
+  "clean": {
+    "dir": "clean",
+    "file": "dataset.csv",
+    "rows": 3,
+    "defects": 0,
+    "note": "3 distinct applicants with names, valid emails and ages in range: zero findings."
+  }
+}

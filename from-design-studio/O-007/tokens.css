@@ -1,0 +1,14 @@
+/* designs/O-007/tokens.css: CV layout tokens (one accent, print white). The only color and type source of page.html and page-en.html. --scale shrinks the type for a long fill (1 to 0.8). */
+:root {
+  --paper: #ffffff;
+  --ink: #16181d;
+  --muted: #4a505c;
+  --accent: #b83a0a;
+  --on-accent: #ffffff;
+  --line: #d9dde3;
+  --soft: #f3f1ec;
+  --font-display: "Segoe UI", "Arial Black", Verdana, sans-serif;
+  --font-body: "Segoe UI", Verdana, Arial, sans-serif;
+  --font-hebrew: "Heebo", "Assistant", "Noto Sans Hebrew", "Segoe UI", Arial, sans-serif;
+  --scale: 1;
+}

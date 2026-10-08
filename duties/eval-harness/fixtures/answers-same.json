@@ -1,0 +1,254 @@
+{
+ "answers": [
+  {
+   "case": "c1",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c1 output checked\nrevert: git restore c1.txt"
+  },
+  {
+   "case": "c1",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c1 output checked\nrevert: git restore c1.txt"
+  },
+  {
+   "case": "c1",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c1 output checked\nrevert: git restore c1.txt"
+  },
+  {
+   "case": "c1",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c1 output checked\nrevert: git restore c1.txt"
+  },
+  {
+   "case": "c1",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c1 output checked\nrevert: git restore c1.txt"
+  },
+  {
+   "case": "c2",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c2 output checked\nrevert: git restore c2.txt"
+  },
+  {
+   "case": "c2",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c2 output checked\nrevert: git restore c2.txt"
+  },
+  {
+   "case": "c2",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c2 output checked\nrevert: git restore c2.txt"
+  },
+  {
+   "case": "c2",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c2 output checked\nrevert: git restore c2.txt"
+  },
+  {
+   "case": "c2",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c2 output checked\nrevert: git restore c2.txt"
+  },
+  {
+   "case": "c3",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c3 output checked\nrevert: git restore c3.txt"
+  },
+  {
+   "case": "c3",
+   "run": 2,
+   "text": "looks fine to me, c3 is ok\nrevert: git restore c3.txt"
+  },
+  {
+   "case": "c3",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c3 output checked\nrevert: git restore c3.txt"
+  },
+  {
+   "case": "c3",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c3 output checked\nrevert: git restore c3.txt"
+  },
+  {
+   "case": "c3",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c3 output checked\nrevert: git restore c3.txt"
+  },
+  {
+   "case": "c4",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c4 output checked\nrevert: git restore c4.txt"
+  },
+  {
+   "case": "c4",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c4 output checked\nrevert: git restore c4.txt"
+  },
+  {
+   "case": "c4",
+   "run": 3,
+   "text": "VERDICT: PASS\nnote 1 about c4\nnote 2 about c4\nnote 3 about c4\nnote 4 about c4\nnote 5 about c4\nnote 6 about c4\nnote 7 about c4\nnote 8 about c4\nnote 9 about c4\nrevert: git restore c4.txt"
+  },
+  {
+   "case": "c4",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c4 output checked\nrevert: git restore c4.txt"
+  },
+  {
+   "case": "c4",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c4 output checked\nrevert: git restore c4.txt"
+  },
+  {
+   "case": "c5",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c5 output checked\nrevert: git restore c5.txt"
+  },
+  {
+   "case": "c5",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c5 output checked\nrevert: git restore c5.txt"
+  },
+  {
+   "case": "c5",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c5 output checked\nrevert: git restore c5.txt"
+  },
+  {
+   "case": "c5",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c5 output checked\nrevert: git restore c5.txt"
+  },
+  {
+   "case": "c5",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c5\nrevert: git restore c5.txt\ncontact: someone@example.test"
+  },
+  {
+   "case": "c6",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c6 output checked\nrevert: git restore c6.txt"
+  },
+  {
+   "case": "c6",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c6 output checked\nrevert: git restore c6.txt"
+  },
+  {
+   "case": "c6",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c6 output checked\nrevert: git restore c6.txt"
+  },
+  {
+   "case": "c6",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c6 output checked\nrevert: git restore c6.txt"
+  },
+  {
+   "case": "c6",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c6 output checked\nrevert: git restore c6.txt"
+  },
+  {
+   "case": "c7",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c7 output checked\nrevert: git restore c7.txt"
+  },
+  {
+   "case": "c7",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c7 output checked\nrevert: git restore c7.txt"
+  },
+  {
+   "case": "c7",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c7 output checked\nrevert: git restore c7.txt"
+  },
+  {
+   "case": "c7",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c7 output checked\nrevert: git restore c7.txt"
+  },
+  {
+   "case": "c7",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c7 output checked\nrevert: git restore c7.txt"
+  },
+  {
+   "case": "c8",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c8 output checked\nrevert: git restore c8.txt"
+  },
+  {
+   "case": "c8",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c8 output checked\nrevert: git restore c8.txt"
+  },
+  {
+   "case": "c8",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c8 output checked\nrevert: git restore c8.txt"
+  },
+  {
+   "case": "c8",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c8 output checked\nrevert: git restore c8.txt"
+  },
+  {
+   "case": "c8",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c8 output checked\nrevert: git restore c8.txt"
+  },
+  {
+   "case": "c9",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c9 output checked\nrevert: git restore c9.txt"
+  },
+  {
+   "case": "c9",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c9 output checked\nrevert: git restore c9.txt"
+  },
+  {
+   "case": "c9",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c9 output checked"
+  },
+  {
+   "case": "c9",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c9 output checked\nrevert: git restore c9.txt"
+  },
+  {
+   "case": "c9",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c9 output checked\nrevert: git restore c9.txt"
+  },
+  {
+   "case": "c10",
+   "run": 1,
+   "text": "VERDICT: PASS\nchanged: c10 output checked\nrevert: git restore c10.txt"
+  },
+  {
+   "case": "c10",
+   "run": 2,
+   "text": "VERDICT: PASS\nchanged: c10 output checked\nrevert: git restore c10.txt"
+  },
+  {
+   "case": "c10",
+   "run": 3,
+   "text": "VERDICT: PASS\nchanged: c10 output checked\nrevert: git restore c10.txt"
+  },
+  {
+   "case": "c10",
+   "run": 4,
+   "text": "VERDICT: PASS\nchanged: c10 output checked\nrevert: git restore c10.txt"
+  },
+  {
+   "case": "c10",
+   "run": 5,
+   "text": "VERDICT: PASS\nchanged: c10 output checked\nrevert: git restore c10.txt"
+  }
+ ]
+}

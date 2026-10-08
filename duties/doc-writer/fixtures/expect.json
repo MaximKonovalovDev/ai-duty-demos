@@ -1,0 +1,17 @@
+{
+  "planted": {
+    "dir": "planted",
+    "file": "doc.md",
+    "lines": 14,
+    "defects": 4,
+    "kinds": ["jargon", "long-line", "missing-section"],
+    "note": "a runbook with 4 planted defects: leverage on one line, utilize on another, one 146-char line, and no ## Rollback section (Purpose and Steps present)."
+  },
+  "clean": {
+    "dir": "clean",
+    "file": "doc.md",
+    "lines": 14,
+    "defects": 0,
+    "note": "the same runbook shape without the planted parts: plain words, short lines, Purpose plus Steps plus Rollback: zero findings."
+  }
+}

@@ -1,0 +1,7 @@
+[
+  { "q": "which file refreshes the passport login token", "top": "auth.md" },
+  { "q": "which file writes the vat invoice refund receipt", "top": "billing.md" },
+  { "q": "which file rolls the canary docker rollout back", "top": "deploy.md" },
+  { "q": "which file fires the slack pager webhook alert", "top": "notify.md" },
+  { "q": "which file rebuilds the cron shift roster timetable", "top": "schedule.md" }
+]

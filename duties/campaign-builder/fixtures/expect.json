@@ -1,0 +1,18 @@
+{
+  "planted": {
+    "dir": "planted",
+    "files": 5,
+    "links": 3,
+    "defects": 5,
+    "kinds": ["bad-utm", "missing-field", "missing-utm", "pii"],
+    "note": "a file-only campaign with 5 planted defects: campaign.json misses utm_campaign, one link has no UTM, one link misses utm_campaign, one link carries an uppercase utm_source value, one post line holds an email."
+  },
+  "clean": {
+    "dir": "clean",
+    "files": 5,
+    "links": 2,
+    "defects": 0,
+    "joined": { "visits": 100, "sales": 1 },
+    "note": "the same campaign shape without the planted parts: lowercase UTM on every link, no personal data, full campaign fields, scoreboard join 100 of 125 visits and 1 of 2 sales."
+  }
+}

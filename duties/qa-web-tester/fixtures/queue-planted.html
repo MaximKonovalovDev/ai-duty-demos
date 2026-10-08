@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="he">
+<head><meta charset="utf-8"><title>תור אישורים / Approval queue (demo fixture)</title>
+<style>body{font-family:Arial,sans-serif;max-width:900px;margin:2em auto;padding:0 1em}table{width:100%;border-collapse:collapse}th,td{border:1px solid #999;padding:.4em;text-align:right}.banner{background:#ffe;border:2px solid #990;padding:.6em;margin-bottom:1em}.en{direction:ltr;text-align:left;color:#333}.status{font-weight:bold}</style>
+</head>
+<body>
+<h1>תור אישורים / Approval queue</h1>
+<div class="banner">הדגמה בלבד: דבר לא נשלח — המשתמש מאשר תחילה.<br><span class="en">DEMO ONLY: nothing is sent — the user approves first. 5 rows shown.</span></div>
+<table>
+<tr><th>משרה / Role</th><th>חברה / Company</th><th>מיקום / Location</th><th>ציון / Fit</th><th>המלצה / Rec.</th><th>סטטוס / Status</th><th>פעולה / Action</th></tr>
+<tr><td><span lang="he">דרוש/ה בודק/ת תוכנה: כתיבת בדיקות אוטומטיות, דיווח על באגים ועבודה מול צוות הפיתוח.</span><br><span class="en" lang="en" dir="ltr">Software Tester (automated tests + bug reports)</span></td><td><span class="en" lang="en" dir="ltr">Acme Labs</span></td><td><span class="en" lang="en" dir="ltr">Tel Aviv</span></td><td>82.5</td><td><span class="en" lang="en" dir="ltr">apply</span></td><td class="status"><span class="en" lang="en" dir="ltr">waiting-for-user</span></td><td>אשר / דחה — Approve / Reject</td></tr>
+<tr><td><span lang="he">מחפשים מהנדס/ת איכות לבדיקות API ובדיקות דפדפן עם Playwright ו-pytest.</span><br><span class="en" lang="en" dir="ltr">QA Automation Engineer (API + browser tests)</span></td><td><span class="en" lang="en" dir="ltr">Northwind Software</span></td><td><span class="en" lang="en" dir="ltr">Remote</span></td><td>77</td><td><span class="en" lang="en" dir="ltr">apply</span></td><td class="status"><span class="en" lang="en" dir="ltr">waiting-for-user</span></td><td>אשר / דחה — Approve / Reject</td></tr>
+<tr><td><span lang="he">דרוש/ה מנתח/ת בדיקות: תכנון בדיקות, מקרי קצה ומעקב אחר רגרסיות.</span><br><span class="en" lang="en" dir="ltr">Test Analyst (plans + regression)</span></td><td><span class="en" lang="en" dir="ltr">Contoso Systems</span></td><td><span class="en" lang="en" dir="ltr">Haifa</span></td><td>41.2</td><td><span class="en" lang="en" dir="ltr">prep</span></td><td class="status"><span class="en" lang="en" dir="ltr">waiting-for-user</span></td><td>אשר / דחה — Approve / Reject</td></tr>
+<tr><td><span lang="he">תפקיד תמיכה טכנית: מענה ללקוחות, תיעוד בעיות והעברתן לפיתוח.</span><br><span class="en" lang="en" dir="ltr">Support Engineer (tickets + docs)</span></td><td><span class="en" lang="en" dir="ltr">Fabrikam Ltd</span></td><td><span class="en" lang="en" dir="ltr">Herzliya</span></td><td>12</td><td><span class="en" lang="en" dir="ltr">skip</span></td><td class="status"><span class="en" lang="en" dir="ltr">waiting-for-user</span></td><td>אשר / דחה — Approve / Reject</td></tr>
+<tr><td><span lang="he">מפתח/ת אינטגרציות: חיבור מערכות דרך ממשקי API ושרתי MCP.</span><br><span class="en" lang="en" dir="ltr">Integration Developer (APIs + MCP)</span></td><td><span class="en" lang="en" dir="ltr">Globex Tech</span></td><td><span class="en" lang="en" dir="ltr">Jerusalem</span></td><td>66</td><td><span class="en" lang="en" dir="ltr">prep</span></td><td class="status"><span class="en" lang="en" dir="ltr">waiting-for-user</span></td><td>אשר / דחה — Approve / Reject</td></tr>
+</table>
+<p class="en">Synthetic demo page for the qa-web-tester test: invented companies, no real data, no runtime, nothing sent.</p>
+<p>דף הדגמה סטטי עם נתונים בדויים; בלי זמן אמת, בלי שליחות.</p>
+<p><a href="queue-details-missing.html">פרטים / Details</a></p>
+<script>console.error("planted console error: queue widget failed");</script>
+<p><input type="text" name="note" placeholder="הערה"></p>
+<div style="width:2400px;height:10px"></div>
+</body></html>

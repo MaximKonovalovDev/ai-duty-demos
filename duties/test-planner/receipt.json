@@ -1,0 +1,27 @@
+{
+  "duty": "test-planner",
+  "date": "2026-10-04T00:54:13.999Z",
+  "command": "node duties/test-planner/run.mjs --real",
+  "target": {
+    "kind": "spec",
+    "path": "FINISH-LINE.md",
+    "bytes": 2095
+  },
+  "numbers": {
+    "requirements": 10,
+    "cases": 48,
+    "flagged": 0,
+    "boundaryCases": 27,
+    "regressionCases": 1,
+    "negativeCases": 10,
+    "uncovered": 0,
+    "proofLines": 8
+  },
+  "summary": "real spec FINISH-LINE.md: 10 requirements (bars and rules) became 48 cases; 0 flagged as untestable as written; 8 runnable proof lines carried",
+  "tests": {
+    "file": "duties/test-planner/test.mjs",
+    "passed": true,
+    "count": 6
+  },
+  "sourceHash": "88ad8f74f94efae63a56f540"
+}

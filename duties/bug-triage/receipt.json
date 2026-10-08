@@ -1,0 +1,26 @@
+{
+  "duty": "bug-triage",
+  "date": "2026-10-04T00:45:12.999Z",
+  "command": "node duties/bug-triage/run.mjs --real",
+  "target": {
+    "kind": "log",
+    "path": "sprint/loop-keeper.log",
+    "bytes": 233139,
+    "sha256": "20abe2aac7a871fa"
+  },
+  "numbers": {
+    "lines": 846,
+    "patterns": 317,
+    "problemPatterns": 107,
+    "problemFamilies": 19,
+    "errorPatterns": 4,
+    "biggestFamilyLines": 89
+  },
+  "summary": "real keeper log: 846 lines, 317 patterns, 107 problem patterns in 19 families; the biggest family is 'waiting: no' with 89 lines (first: line 232); top pattern bt-f897f78d x4",
+  "tests": {
+    "file": "duties/bug-triage/test.mjs",
+    "passed": true,
+    "count": 6
+  },
+  "sourceHash": "18d8f00b02073a0d599682ac"
+}

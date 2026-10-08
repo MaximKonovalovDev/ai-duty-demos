@@ -1,0 +1,23 @@
+{
+  "duty": "gate-builder",
+  "date": "2026-10-04T00:57:20.642Z",
+  "command": "node duties/gate-builder/run.mjs --real",
+  "target": {
+    "kind": "repo",
+    "path": "tests",
+    "note": "jobhunt's own node tests, gate written to a temp folder, baseline in a temp file"
+  },
+  "numbers": {
+    "steps": 1,
+    "tests": 353,
+    "secondRunTests": 353,
+    "ratchetBaseline": 353
+  },
+  "summary": "real repo jobhunt: detected node-test, gate PASS with 353 tests, second run PASS against the new baseline",
+  "tests": {
+    "file": "duties/gate-builder/test.mjs",
+    "passed": true,
+    "count": 5
+  },
+  "sourceHash": "78bf0d705da77824acd14414"
+}

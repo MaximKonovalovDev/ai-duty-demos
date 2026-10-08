@@ -1,0 +1,22 @@
+{
+  "duty": "design-reviewer",
+  "date": "2026-10-04T12:14:34.968Z",
+  "command": "node duties/design-reviewer/run.mjs --real",
+  "target": {
+    "kind": "design",
+    "path": "from-design-studio/O-007/page.html",
+    "sha256": "f5797d4d5354ad0b"
+  },
+  "numbers": {
+    "pages": 2,
+    "checks": 7,
+    "defects": 0
+  },
+  "summary": "real pages from-design-studio/O-007/page.html + 1 more with from-design-studio/O-007/cv.css: 2 pages, 7 checks, 0 defect(s)",
+  "tests": {
+    "file": "duties/design-reviewer/test.mjs",
+    "passed": true,
+    "count": 12
+  },
+  "sourceHash": "3e96a2a9baee69362780a8a3"
+}

@@ -1,0 +1,16 @@
+{
+  "planted": {
+    "dir": "planted/repo",
+    "queries": "planted/queries.json",
+    "files": 6,
+    "defects": 5,
+    "kinds": ["rank-miss"],
+    "note": "5 reference queries over a 6-file repo: each must rank its own file first. A query whose file is not rank 1 is one rank-miss defect. The 6th file shares only common words, so IDF must outrank it."
+  },
+  "clean": {
+    "dir": "clean/repo",
+    "queries": 1,
+    "defects": 0,
+    "note": "a query with no vocabulary in the repo (xylophone quantum badger): zero results, no false alarm."
+  }
+}

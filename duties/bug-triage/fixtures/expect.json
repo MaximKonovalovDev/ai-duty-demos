@@ -1,0 +1,16 @@
+{
+  "planted": {
+    "file": "planted.log",
+    "problemPatterns": 2,
+    "counts": [6, 3],
+    "severities": ["error", "warn"],
+    "new": 2,
+    "note": "6 db-connect errors with different hosts, ports, attempts, timeouts and sessions must be ONE pattern; 3 stale-cache warnings with different keys and ages must be ONE pattern; '0 errors, 0 failures' is not a problem; the stack lines belong to the first error."
+  },
+  "clean": {
+    "file": "clean.log",
+    "problemPatterns": 1,
+    "new": 0,
+    "note": "its only problem pattern (stale cache) is already known, so nothing new may be filed; 'errors=0' lines are not problems."
+  }
+}

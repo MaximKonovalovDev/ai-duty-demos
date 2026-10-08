@@ -1,0 +1,13 @@
+{
+  "name": "ai-duty-demos",
+  "version": "1.0.0",
+  "description": "Thirteen small, tested demos of the duties that AI-quality, QA-automation and agent-builder job ads list.",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "test": "node scripts/test-all.mjs"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "planted": {
+    "file": "planted-spec.md",
+    "requirements": 6,
+    "flagged": 2,
+    "flaggedReqs": ["R2", "R5"],
+    "boundaryCases": 9,
+    "regressionCases": 1,
+    "cases": 21,
+    "uncovered": 0,
+    "note": "R2 'fast' and R5 'user-friendly' have no number or example, so they are flagged and their positive case is blocked; R1, R3 and R4 carry a number each, so each gets three boundary cases (below, at, above); R6 says 'existing ... unchanged', so it gets a regression case; every requirement has at least one case."
+  },
+  "clean": {
+    "file": "clean-spec.md",
+    "requirements": 5,
+    "flagged": 0,
+    "uncovered": 0,
+    "note": "five measurable requirements: nothing may be flagged; HTTP 200 is a label, not a limit, so it gets no boundary cases."
+  }
+}

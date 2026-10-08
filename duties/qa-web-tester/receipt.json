@@ -1,0 +1,23 @@
+{
+  "duty": "qa-web-tester",
+  "date": "2026-10-04T00:51:49.087Z",
+  "command": "node duties/qa-web-tester/run.mjs --real",
+  "target": {
+    "kind": "generated",
+    "path": "tools/render-rtl.mjs",
+    "note": "the live Hebrew approve-queue and tracker pages rendered from current data, tested at 1280x800 and 390x844"
+  },
+  "numbers": {
+    "pages": 2,
+    "viewports": 2,
+    "defects": 1,
+    "defect_overflow_x": 1
+  },
+  "summary": "real pages: 4 runs, 1 defect(s): overflow-x (queue 390x844)",
+  "tests": {
+    "file": "duties/qa-web-tester/test.mjs",
+    "passed": true,
+    "count": 6
+  },
+  "sourceHash": "3c7e4ec37f02bc9c1bd2afc6"
+}

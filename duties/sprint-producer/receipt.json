@@ -1,0 +1,25 @@
+{
+  "duty": "sprint-producer",
+  "date": "2026-10-04T05:43:14.162Z",
+  "command": "node duties/sprint-producer/run.mjs --real",
+  "target": {
+    "kind": "board",
+    "path": "sprint/board.md",
+    "sha256": "d1c9b0d4b351a751"
+  },
+  "numbers": {
+    "rows": 36,
+    "checks": 6,
+    "defects": 17,
+    "defect_missing_f2p": 8,
+    "defect_missing_p2p": 8,
+    "defect_blocked_without_next": 1
+  },
+  "summary": "real board sprint/board.md: 36 rows, 6 checks, 17 defect(s): missing-f2p@JH-105, missing-p2p@JH-105, missing-f2p@JH-107, missing-p2p@JH-107, missing-f2p@JH-124, missing-p2p@JH-124, missing-f2p@JH-05, missing-p2p@JH-05",
+  "tests": {
+    "file": "duties/sprint-producer/test.mjs",
+    "passed": true,
+    "count": 9
+  },
+  "sourceHash": "528bd3f4b74e3d2dc0b0c3a7"
+}

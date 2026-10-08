@@ -1,0 +1,17 @@
+{
+  "planted": {
+    "dir": "planted",
+    "file": "page.html",
+    "lines": 12,
+    "defects": 6,
+    "kinds": ["hardcoded-color", "missing-alt", "missing-label", "missing-lang", "no-title", "physical-css"],
+    "note": "12-line page with 6 planted defects: no lang, no title, img without alt (line 7), input with a loose label and no id (line 9), inline style with a hex color plus margin-left (line 10)."
+  },
+  "clean": {
+    "dir": "clean",
+    "file": "page.html",
+    "lines": 13,
+    "defects": 0,
+    "note": "the same shape fixed: he plus rtl, title, labelled input, alt present, color via var(--ink), margin-inline-start: zero findings."
+  }
+}

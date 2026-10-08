@@ -1,0 +1,13 @@
+{
+  "planted": {
+    "file": "queue-planted.html",
+    "defects": 4,
+    "kinds": ["broken-link", "console-error", "missing-label", "overflow-x"],
+    "note": "a synthetic Hebrew RTL queue page with 4 planted defects: a link to a page that does not exist, a console.error, an input with only a placeholder, a 2400px wide block that makes the RTL page scroll sideways."
+  },
+  "clean": {
+    "file": "queue-clean.html",
+    "defects": 0,
+    "note": "the same page without the planted parts: zero findings at 1280x800, so no false alarm on an RTL table page."
+  }
+}

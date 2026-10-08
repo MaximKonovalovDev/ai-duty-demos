@@ -1,0 +1,19 @@
+{
+  "baseline": { "file": "answers-baseline.json", "n": 50, "pass": 48 },
+  "planted": {
+    "file": "answers-degraded.json",
+    "n": 50,
+    "pass": 33,
+    "regression": true,
+    "gate": "FAIL",
+    "note": "the same 10 cases and 5 runs each, but the system got worse: 17 of 50 answers break the rubric (missing verdict line, over 8 lines, no revert line, an email address). The harness must call it a regression because its 95% interval (52-78%) lies entirely below the baseline's (87-99%), fail the pass gate, and name the flaky cases."
+  },
+  "clean": {
+    "file": "answers-same.json",
+    "n": 50,
+    "pass": 46,
+    "regression": false,
+    "gate": "PASS",
+    "note": "another sample of the same system (46 of 50, 4 broken answers): the intervals overlap, so no regression is called and the gate passes. A harness that cried wolf here would be useless."
+  }
+}

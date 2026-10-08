@@ -1,0 +1,17 @@
+2026-10-04T10:00:01Z ses_aaa111 svc start ok build 4412
+2026-10-04T10:00:05Z ses_aaa111 ERROR db connect failed host=10.0.0.4 port=5432 attempt 1 (timeout 3000ms)
+    at connect (C:\svc\db.js:41:9)
+    at retry (C:\svc\db.js:77:3)
+2026-10-04T10:00:09Z ses_aaa111 info heartbeat 12 ok
+2026-10-04T10:00:15Z ses_bbb222 ERROR db connect failed host=10.0.0.9 port=5433 attempt 2 (timeout 3200ms)
+2026-10-04T10:00:21Z ses_bbb222 info heartbeat 13 ok
+2026-10-04T10:00:30Z ses_ccc333 ERROR db connect failed host=10.0.0.4 port=5432 attempt 3 (timeout 3000ms)
+2026-10-04T10:00:44Z ses_aaa111 WARN cache stale key=ab12cd34ef56 age 91s
+2026-10-04T10:00:51Z ses_ccc333 ERROR db connect failed host=10.0.0.7 port=5432 attempt 4 (timeout 4100ms)
+2026-10-04T10:01:02Z ses_aaa111 info heartbeat 14 ok
+2026-10-04T10:01:10Z ses_bbb222 ERROR db connect failed host=10.0.0.4 port=5434 attempt 5 (timeout 3000ms)
+2026-10-04T10:01:15Z ses_aaa111 WARN cache stale key=9f8e7d6c5b4a age 120s
+2026-10-04T10:01:23Z ses_ccc333 ERROR db connect failed host=10.0.0.2 port=5432 attempt 6 (timeout 2900ms)
+2026-10-04T10:01:40Z ses_aaa111 info checks done: 0 errors, 0 failures
+2026-10-04T10:01:55Z ses_aaa111 WARN cache stale key=00aa11bb22cc age 7m
+2026-10-04T10:02:03Z ses_aaa111 info heartbeat 15 ok

@@ -1,0 +1,25 @@
+{
+  "duty": "abuse-analyst",
+  "date": "2026-10-04T13:20:22.129Z",
+  "command": "node duties/abuse-analyst/run.mjs --real",
+  "target": {
+    "kind": "log",
+    "path": "sprint/loop-keeper.log"
+  },
+  "numbers": {
+    "lines": 1079,
+    "events": 1079,
+    "defects": 4,
+    "defect_rate_burst": 1,
+    "defect_machine_rhythm": 1,
+    "defect_template_reuse": 1,
+    "defect_sweep": 1
+  },
+  "summary": "real log sprint/loop-keeper.log: 1079 lines, 1079 timestamped, 5 checks, 4 defect(s): machine-rhythm, rate-burst, sweep, template-reuse",
+  "tests": {
+    "file": "duties/abuse-analyst/test.mjs",
+    "passed": true,
+    "count": 10
+  },
+  "sourceHash": "a217b00950b919c42256ec9b"
+}

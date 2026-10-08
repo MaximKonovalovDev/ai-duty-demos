@@ -1,0 +1,274 @@
+{
+  "cases": [
+    {
+      "id": "c1",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c2",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c3",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c4",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c5",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c6",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c7",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c8",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c9",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    },
+    {
+      "id": "c10",
+      "checks": [
+        {
+          "name": "verdict-line",
+          "kind": "regex",
+          "value": "^VERDICT: (PASS|FAIL|BLOCKED)$",
+          "flags": "m"
+        },
+        {
+          "name": "max-8-lines",
+          "kind": "maxLines",
+          "value": 8
+        },
+        {
+          "name": "revert-line",
+          "kind": "regex",
+          "value": "^revert:",
+          "flags": "mi"
+        },
+        {
+          "name": "no-email",
+          "kind": "notRegex",
+          "value": "[\\w.+-]+@[\\w-]+\\.[\\w.-]+"
+        }
+      ]
+    }
+  ]
+}

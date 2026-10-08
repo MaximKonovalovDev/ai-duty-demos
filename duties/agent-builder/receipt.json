@@ -1,0 +1,31 @@
+{
+  "duty": "agent-builder",
+  "date": "2026-10-04T05:17:52.423Z",
+  "command": "node duties/agent-builder/run.mjs --real",
+  "target": {
+    "kind": "dir",
+    "path": "duties/bug-triage",
+    "files": [
+      "DUTY.md",
+      "SKILL.md",
+      "agent.md",
+      "fixtures",
+      "receipt.json",
+      "run.mjs",
+      "test.mjs"
+    ],
+    "sha256": "64a2fa834ec2132e"
+  },
+  "numbers": {
+    "files": 4,
+    "checks": 6,
+    "defects": 0
+  },
+  "summary": "real scaffold duties/bug-triage: 4 files, 6 checks, 0 defect(s)",
+  "tests": {
+    "file": "duties/agent-builder/test.mjs",
+    "passed": true,
+    "count": 8
+  },
+  "sourceHash": "067734b67ae1a54e07cf850c"
+}

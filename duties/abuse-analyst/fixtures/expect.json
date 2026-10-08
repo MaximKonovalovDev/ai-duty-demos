@@ -1,0 +1,17 @@
+{
+  "planted": {
+    "dir": "planted",
+    "file": "access.log",
+    "rows": 44,
+    "defects": 5,
+    "kinds": ["auth-burst", "machine-rhythm", "rate-burst", "sweep", "template-reuse"],
+    "note": "44 timestamped lines with 5 planted abuse signals: lines 1-10 metronomic heartbeat every 5s, lines 11-24 fourteen lines in 53s, lines 25-30 one inbox shape across two minute buckets, lines 31-35 five 403 denies in 50s, lines 36-44 nine distinct user ids in 51s."
+  },
+  "clean": {
+    "dir": "clean",
+    "file": "access.log",
+    "rows": 8,
+    "defects": 0,
+    "note": "8 human-paced lines with distinct shapes, irregular gaps and no denies or id runs: zero findings."
+  }
+}

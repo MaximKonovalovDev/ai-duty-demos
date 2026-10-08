@@ -1,0 +1,13 @@
+{
+  "planted": {
+    "dir": "planted",
+    "defects": 4,
+    "kinds": ["bad-frontmatter", "missing-file", "overbroad-scope", "unsafe-capability"],
+    "note": "a helper scaffold with 4 planted defects: SKILL.md without front matter, agent.md granting tools by wildcard, run.mjs phoning an outside host, test.mjs absent."
+  },
+  "clean": {
+    "dir": "clean",
+    "defects": 0,
+    "note": "the same scaffold without the planted parts: front matter parses, tools named one by one, runner touches nothing outside, test and manifest present: zero findings."
+  }
+}

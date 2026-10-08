@@ -1,0 +1,40 @@
+  /* O-007 CV layout, one A4 page. Class names match jobhunt's cv-render (page, kicker, h1, tagline, h2, job, job-head, role, years, desc, skills, pill, langs, contact). Logical properties only; color and type only through tokens.css. */
+  @page { size: A4; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    width: 210mm; min-height: 297mm;
+    background: var(--paper); color: var(--ink);
+    font-family: var(--font-body); font-size: calc(14px * var(--scale, 1)); line-height: 1.55;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact;
+  }
+  html[lang="he"] body { font-family: var(--font-hebrew); }
+  .page { width: 210mm; min-height: 296mm; padding-inline: 17mm; padding-block-end: 12mm; border-block-start: 7px solid var(--accent); display: flex; flex-direction: column; }
+  header { padding-block: 14mm 5mm; border-block-end: 1px solid var(--line); }
+  .kicker { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; color: var(--accent); margin-block-end: 5px; }
+  html[lang="he"] .kicker { letter-spacing: 0.04em; font-size: 13px; }
+  h1 { font-family: var(--font-display); font-size: calc(46px * var(--scale, 1)); line-height: 1.1; font-weight: 800; color: var(--ink); margin-block-end: 4px; }
+  html[lang="he"] h1 { font-family: var(--font-hebrew); font-weight: 700; }
+  html[lang="he"] h2, html[lang="he"] .role, html[lang="he"] .langs { font-weight: 700; }
+  .tagline { font-size: calc(19px * var(--scale, 1)); line-height: 1.3; color: var(--muted); font-weight: 600; margin-block-end: 8px; }
+  .contact { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 16px; }
+  .contact span + span::before { content: "\00b7"; margin-inline-end: 16px; color: var(--accent); font-weight: 800; }
+  section { margin-block-start: calc(16px * var(--scale, 1)); }
+  h2 { font-size: calc(16.5px * var(--scale, 1)); line-height: 1.2; color: var(--accent); font-weight: 800; border-block-end: 1.5px solid var(--line); padding-block-end: 3px; margin-block-end: 7px; }
+  html[lang="en"] h2 { font-size: calc(13px * var(--scale, 1)); letter-spacing: 0.12em; text-transform: uppercase; }
+  .summary { font-size: calc(14.6px * var(--scale, 1)); line-height: 1.6; color: var(--ink); }
+  .skills { display: flex; flex-wrap: wrap; gap: 6px; }
+  .pill { font-size: calc(13.2px * var(--scale, 1)); line-height: 1.3; color: var(--ink); background: var(--soft); border: 1px solid var(--line); border-radius: 4px; padding-block: 2px; padding-inline: 9px; }
+  .job { border-inline-start: 3px solid var(--accent); padding-inline-start: 11px; margin-block-end: calc(8px * var(--scale, 1)); }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .role { font-size: calc(14.4px * var(--scale, 1)); font-weight: 800; color: var(--ink); }
+  .years { font-size: calc(12.6px * var(--scale, 1)); color: var(--muted); }
+  .desc { font-size: calc(13.6px * var(--scale, 1)); line-height: 1.5; color: var(--muted); }
+  .learn { list-style: none; }
+  .learn li { font-size: calc(13.6px * var(--scale, 1)); color: var(--muted); padding-inline-start: 14px; position: relative; margin-block-end: 3px; }
+  .learn li::before { content: ""; position: absolute; inset-inline-start: 0; inset-block-start: 0.62em; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
+  .langs { font-size: calc(13.6px * var(--scale, 1)); color: var(--ink); font-weight: 700; margin-block-start: 4px; }
+  a { color: inherit; text-decoration: none; }
+  bdi { unicode-bidi: isolate; }
+  @media screen { body { margin-inline: auto; box-shadow: 0 0 0 1px var(--line); } }
+  @media print { html, body { background: var(--paper); } body { box-shadow: none; } }

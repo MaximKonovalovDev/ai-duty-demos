@@ -1,0 +1,11 @@
+{
+  "planted": {
+    "defects": 2,
+    "classes": ["ratchet-drop", "failing-test"],
+    "note": "a repo with 3 passing tests and a baseline of 3. Planted defect 1: one test file is deleted (3 -> 2 tests) and the gate must FAIL on the ratchet. Planted defect 2: a failing test is added and the gate must FAIL on the test."
+  },
+  "clean": {
+    "falseAlarms": 0,
+    "note": "the same repo with 3 tests passes, and with a new test added (4 tests) it passes again and the baseline rises to 4."
+  }
+}

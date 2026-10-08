@@ -1,0 +1,17 @@
+{
+  "planted": {
+    "dir": "planted",
+    "file": "board.md",
+    "rows": 5,
+    "defects": 6,
+    "kinds": ["blocked-without-next", "done-without-evidence", "missing-f2p", "missing-owner", "missing-p2p", "missing-scorecard"],
+    "note": "a 5-row board with 6 planted defects: one row clean, one row missing F2P, one row missing P2P, one DONE row with empty evidence, one BLOCKED row with empty scorecard, owner and evidence."
+  },
+  "clean": {
+    "dir": "clean",
+    "file": "board.md",
+    "rows": 3,
+    "defects": 0,
+    "note": "the same shape without the planted parts: every row names its scorecard and owner and carries F2P plus P2P, DONE is evidenced, BLOCKED is explained: zero findings."
+  }
+}
