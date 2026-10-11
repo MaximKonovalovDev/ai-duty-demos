@@ -3,10 +3,6 @@
 // rate bursts, machine-regular rhythm, template reuse across sessions,
 // auth-failure bursts and id sweeps. Files only, no network, no probing:
 // it reads our own local logs, never touches a live site.
-// Donor ideas: fp-research drill (per-class detection table, human
-// false-positive counting, dated change ledger). Internal, ideas only:
-// the signals here are reimplemented for plain timestamped text logs,
-// 0 lines copied.
 // Usage: node duties/abuse-analyst/run.mjs <logfile> [--json]
 //        node duties/abuse-analyst/run.mjs --real --json     (the real target of the receipt)
 import { existsSync, readFileSync, statSync } from "node:fs";
@@ -14,7 +10,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const REAL_TARGET = "sprint/loop-keeper.log";
+const REAL_TARGET = "real/service.log"; // the author's own log, not in this repo
 export const CHECKS = 5;
 
 // Thresholds: a burst is volume no human typing pace reaches; rhythm needs a

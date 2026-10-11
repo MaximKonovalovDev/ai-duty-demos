@@ -4,7 +4,7 @@
   "command": "node duties/test-planner/run.mjs --real",
   "target": {
     "kind": "spec",
-    "path": "FINISH-LINE.md",
+    "path": "[private file]",
     "bytes": 2095
   },
   "numbers": {
@@ -17,7 +17,7 @@
     "uncovered": 0,
     "proofLines": 8
   },
-  "summary": "real spec FINISH-LINE.md: 10 requirements (bars and rules) became 48 cases; 0 flagged as untestable as written; 8 runnable proof lines carried",
+  "summary": "real spec [private file]: 10 requirements (bars and rules) became 48 cases; 0 flagged as untestable as written; 8 runnable proof lines carried",
   "tests": {
     "file": "duties/test-planner/test.mjs",
     "passed": true,

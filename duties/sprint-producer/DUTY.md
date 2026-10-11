@@ -29,7 +29,7 @@ Six checks, one per rule group above (F2P/P2P count as one check each).
 - Test: `node --test duties/sprint-producer/test.mjs` (planted board: 6 defects
   of the expected kinds; clean board: 0 findings; temp boards cover each kind;
   the planted board differs from the clean one by exactly the planted cells).
-- Receipt: `receipt.json`, a run on our real board `sprint/board.md`, written by
+- Receipt: `receipt.json`, a run on a real board of the author's own project (not in this repo), written by
   `node tools/duty.mjs check sprint-producer --write-receipt`. The real board
   keeps OWNER rows whose Done-when is "the owner's word" with no F2P/P2P lines, so
   the receipt honestly records open defects instead of a clean sheet.
@@ -45,7 +45,3 @@ Six checks, one per rule group above (F2P/P2P count as one check each).
   are present and the proof markers exist.
 - No model: it is a deterministic core. The agent in `agent.md` adds the judgment
   (which row blocks the sprint, what the smallest row fix is).
-- Donors named by the team design: center `loopkit_new`, vision-check (board
-  rows carry F2P/P2P proof lines). Their code was not read and none was
-  copied; the checks here are the generic ones (proof markers present, owner
-  named, DONE evidenced, BLOCKED explained).

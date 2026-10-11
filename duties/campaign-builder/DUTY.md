@@ -55,8 +55,4 @@ as joined (KNOWN); anything else stays unjoined (UNKNOWN).
   campaign leaves this duty as files, never as a published post. The agent in
   `agent.md` adds the judgment (which finding blocks the folder, what the
   smallest fix is).
-- No model: it is a deterministic core. Donors named by the team design:
-  marketing-studio `tracking_check` (UTM check, no-PII gate) and `scoreboard`
-  (visits-sales join by UTM). Their code was read only through the arsenal
-  listing; one donor file is copied under `from-marketing-studio/` with its
-  license line, none is vendored into the checks.
+- No model: it is a deterministic core.

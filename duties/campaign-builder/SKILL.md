@@ -5,7 +5,7 @@ description: Use when someone hands you a file-only marketing campaign folder an
 
 # Campaign builder (skill)
 
-When to use: a campaign folder (ours or a donor-shaped one) before it ships or before a DONE is claimed. Files only: nothing here ever posts, sends or publishes.
+When to use: a campaign folder before it ships or before a DONE is claimed. Files only: nothing here ever posts, sends or publishes.
 
 Steps:
 

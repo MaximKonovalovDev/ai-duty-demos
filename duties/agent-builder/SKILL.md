@@ -4,7 +4,7 @@ description: Use when someone hands you an agent or MCP scaffold directory and w
 ---
 # Agent builder (skill)
 
-When to use: a scaffold directory (ours or a donor-shaped one) before it is shared or released.
+When to use: a scaffold directory before it is shared or released.
 
 Steps:
 1. `node duties/agent-builder/run.mjs <dir> --json` gives `defects` (each with kind, file and detail) plus file and check counts.

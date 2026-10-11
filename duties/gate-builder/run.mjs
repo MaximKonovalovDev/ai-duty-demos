@@ -1,8 +1,7 @@
 // duties/gate-builder/run.mjs: the deterministic core of the gate-builder duty.
 // The job ads say CI/CD; ours is a LOCAL gate with a ratchet (no hosted CI, by the author's rule): detect how a repo
 // tests itself, write one dependency-free gate.mjs that runs those tests, fails when a test fails, and fails
-// when the number of tests goes DOWN (the ratchet only moves up). Donor ideas: factory ratchet, forge
-// quality_ratchet, our tools/check.mjs. No model, no network.
+// when the number of tests goes DOWN (the ratchet only moves up). No model, no network.
 // Usage: node duties/gate-builder/run.mjs <repo> [--write <gate.mjs>] [--json]
 //        node duties/gate-builder/run.mjs --real --json      (the real target of the receipt)
 import { spawnSync } from "node:child_process";
@@ -86,15 +85,15 @@ function real() {
   const dir = mkdtempSync(join(tmpdir(), "gate-real-"));
   try {
     const gate = join(dir, "gate.mjs");
-    writeFileSync(gate, makeGate(steps, { name: "jobhunt" }));
+    writeFileSync(gate, makeGate(steps, { name: "ai-duty-demos" }));
     const base = join(dir, "baseline.json");
     const first = runGate(gate, ROOT, base);
     const second = runGate(gate, ROOT, base);
     if (!first.ok || !second.ok) throw new Error(`gate on the real repo failed: ${first.out} | ${second.out}`);
     return {
-      target: { kind: "repo", path: "tests", note: "jobhunt's own node tests, gate written to a temp folder, baseline in a temp file" },
+      target: { kind: "repo", path: "tests", note: "this repo's own node tests, gate written to a temp folder, baseline in a temp file" },
       numbers: { steps: steps.length, tests: first.tests, secondRunTests: second.tests, ratchetBaseline: first.tests },
-      summary: `real repo jobhunt: detected ${steps.map((s) => s.id).join("+")}, gate PASS with ${first.tests} tests, second run PASS against the new baseline`,
+      summary: `real repo: detected ${steps.map((s) => s.id).join("+")}, gate PASS with ${first.tests} tests, second run PASS against the new baseline`,
     };
   } finally { rmSync(dir, { recursive: true, force: true }); }
 }

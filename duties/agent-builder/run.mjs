@@ -2,7 +2,7 @@
 // Statically audits an agent/MCP scaffold directory the way the ads ask: every agent
 // ships a skill card, a bounded runner and a test, names its tools one by one, and
 // carries no network exfiltration, no shell escape and no secret in the open.
-// Donor ideas: skillworks MCP part, center mcp/. No model, no network, read only.
+// No model, no network, read only.
 // Usage: node duties/agent-builder/run.mjs <dir> [--json]
 //        node duties/agent-builder/run.mjs --real --json     (the real target of the receipt)
 import { createHash } from "node:crypto";

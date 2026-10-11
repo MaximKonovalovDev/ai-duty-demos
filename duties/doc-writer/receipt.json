@@ -4,7 +4,7 @@
   "command": "node duties/doc-writer/run.mjs --real",
   "target": {
     "kind": "doc",
-    "path": "team/fetch.md",
+    "path": "[private file]",
     "sha256": "6051116f9ff05b88"
   },
   "numbers": {
@@ -13,7 +13,7 @@
     "defects": 2,
     "defect_long_line": 2
   },
-  "summary": "real doc team/fetch.md: 9 lines, 3 checks, 2 defect(s): long-line",
+  "summary": "real doc [private file]: 9 lines, 3 checks, 2 defect(s): long-line",
   "tests": {
     "file": "duties/doc-writer/test.mjs",
     "passed": true,

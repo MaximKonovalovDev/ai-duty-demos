@@ -50,9 +50,9 @@ or `node scripts/test-all.mjs`, or one duty: `node duties/bug-triage/test.mjs`.
 - `DUTY.md` — the duty in plain words, and what the test proves.
 - `run.mjs` — the tool.
 - `test.mjs` — the planted-defect test.
-- `fixtures/` — the sample inputs. All of it is invented: made-up names, `example.com`, made-up companies.
+- `fixtures/` — the sample inputs. They are invented: made-up names, `example.com`, made-up companies.
 - `SKILL.md` and `agent.md` — instructions that let an AI coding agent do the same duty.
-- `receipt.json` — a record of one run on the author's own private project. It holds counts and a hash only. The files it ran on are not included, so a few lines in `DUTY.md` point at paths you will not find here.
+- `receipt.json` — a record of one run on the author's own private project. It holds counts and a hash, with private file names replaced by `[private file]`, not file contents. The files it ran on are not included, so a few lines in `DUTY.md` point at paths you will not find here.
 
 ## How these were made
 

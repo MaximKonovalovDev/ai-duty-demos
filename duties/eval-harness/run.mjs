@@ -2,8 +2,7 @@
 // Scores AI answers against a rubric (checks per case), over many runs: pass rate with a Wilson 95% interval,
 // per-case consistency (flaky = sometimes passes, sometimes fails), a pass gate, and regression against a
 // baseline that only fires when the two intervals do not overlap (a real drop, not noise).
-// Donor ideas: skillworks eval gate (pass gate over cases), design-studio judge (rubric), promptfoo assertion
-// kinds (contains, regex, max length), read only, nothing installed. No model, no network.
+// Assertion kinds: contains, regex, max length. Read only, nothing installed. No model, no network.
 // Usage: node duties/eval-harness/run.mjs <cases.json> <answers.json> [--baseline b.json] [--save-baseline out.json] [--threshold 0.8] [--json]
 //        node duties/eval-harness/run.mjs --real --json     (the real target of the receipt)
 import { readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
@@ -11,7 +10,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const DONE_DIR = "sprint/queue/done";
+const DONE_DIR = "real/judge-replies"; // the author's own records, not in this repo
 
 export function wilson(pass, n, z = 1.96) {
   if (!n) return { p: 0, low: 0, high: 0 };

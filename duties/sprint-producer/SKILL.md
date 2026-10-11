@@ -4,7 +4,7 @@ description: Use when someone hands you a roadmap/backlog/sprint board file and 
 ---
 # Sprint producer (skill)
 
-When to use: a board file (ours or a donor-shaped one) before the sprint starts or before a DONE is claimed.
+When to use: a board file before the sprint starts or before a DONE is claimed.
 
 Steps:
 1. `node duties/sprint-producer/run.mjs <board.md> --json` gives `defects` (each with kind, row and detail) plus row and check counts.

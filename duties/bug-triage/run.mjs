@@ -1,7 +1,7 @@
 // duties/bug-triage/run.mjs: the deterministic core of the bug-triage duty.
 // Fingerprint every line of a log (timestamps, ids, numbers, paths and durations stripped), cluster the
 // lines that mean the same thing, rank the problems, separate new from known, and print repro-ready findings.
-// Donor idea: forge log_triage (fingerprint, dedupe, repro-ready report). No model, no network, read only.
+// No model, no network, read only.
 // Usage: node duties/bug-triage/run.mjs <log> [--known known.json] [--save-known out.json] [--json]
 //        node duties/bug-triage/run.mjs --real --json     (the real target of the receipt)
 import { createHash } from "node:crypto";
@@ -10,7 +10,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const REAL_TARGET = "sprint/loop-keeper.log";
+const REAL_TARGET = "real/service.log"; // the author's own log, not in this repo
 
 export function decode(buf) {
   if (buf.length >= 2 && buf[0] === 0xff && buf[1] === 0xfe) return buf.subarray(2).toString("utf16le");
@@ -119,7 +119,7 @@ function main() {
     const out = {
       target: { kind: "log", path: REAL_TARGET, bytes: statSync(path).size, sha256: createHash("sha256").update(buf).digest("hex").slice(0, 16) },
       numbers: { lines: r.lines, patterns: r.fingerprints, problemPatterns: r.problems.length, problemFamilies: r.families.length, errorPatterns: r.problems.filter((p) => p.severity === "error").length, biggestFamilyLines: r.families[0]?.lines ?? 0 },
-      summary: `real keeper log: ${r.lines} lines, ${r.fingerprints} patterns, ${r.problems.length} problem patterns in ${r.families.length} families; the biggest family is '${r.families[0]?.family ?? "none"}' with ${r.families[0]?.lines ?? 0} lines (first: line ${r.families[0]?.firstLine ?? 0}); top pattern ${top?.id ?? "none"} x${top?.count ?? 0}`,
+      summary: `real log: ${r.lines} lines, ${r.fingerprints} patterns, ${r.problems.length} problem patterns in ${r.families.length} families; the biggest family is '${r.families[0]?.family ?? "none"}' with ${r.families[0]?.lines ?? 0} lines (first: line ${r.families[0]?.firstLine ?? 0}); top pattern ${top?.id ?? "none"} x${top?.count ?? 0}`,
     };
     console.log(argv.includes("--json") ? JSON.stringify(out, null, 2) : out.summary);
     return;

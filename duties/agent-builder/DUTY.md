@@ -42,7 +42,3 @@ Words in the ads: agent, MCP, multi-agent, tool use, function calling.
   the names and the limits are present and parse.
 - No model: it is a deterministic core. The agent in `agent.md` adds the judgment
   (which defect blocks a release, what the smallest fix is).
-- Donors named by the team design: skillworks MCP part, center `mcp/`
-  (shape of a tool server, manifest habit). Their code was not read and none was
-  copied; the checks here are the generic ones (files present, front matter parses,
-  tools named, no exfiltration, no secret, manifest parses).

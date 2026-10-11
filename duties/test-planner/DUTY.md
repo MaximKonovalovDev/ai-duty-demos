@@ -25,7 +25,7 @@ test plan, test case, test strategy, test scenario, regression.
 - Test: `node --test duties/test-planner/test.mjs`. Planted spec: 6 requirements, 2 vague ones flagged (and only those), 9
   boundary cases from 3 numbers with the right direction (at most 30 items: 29 and 30 accepted, 31 rejected), 1 regression case,
   21 cases, 0 uncovered. Clean spec: 5 measurable requirements, 0 flagged, "HTTP 200" is not treated as a limit.
-- Receipt: a run on our real `FINISH-LINE.md` (the bars and rules of this repo), written by
+- Receipt: a run on a real requirements file of the author's own project (its bars and rules; not in this repo), written by
   `node tools/duty.mjs check test-planner --write-receipt`.
 
 ## Honest limits
@@ -35,4 +35,4 @@ test plan, test case, test strategy, test scenario, regression.
 - Vague-word detection is a word list. A vague requirement without one of those words passes; a measurable one that uses one
   of them with a number elsewhere in its proof passes too.
 - Boundary values assume integer steps (or 0.1 for decimals); units are copied from the text.
-- No model, no network. Donor idea: our board rows (F2P and P2P lines). No code was copied.
+- No model, no network.

@@ -29,33 +29,33 @@ test("clean board: zero findings (no false alarm)", () => {
 test("the planted board differs from the clean one by exactly the planted cells", () => {
   const planted = readFx("planted");
   const clean = readFx("clean");
-  assert.ok(planted.includes("JH-A2") && clean.includes("JH-B1"));
-  assert.ok(!planted.includes("JH-B1") && !clean.includes("JH-A2"));
+  assert.ok(planted.includes("ROW-A2") && clean.includes("ROW-B1"));
+  assert.ok(!planted.includes("ROW-B1") && !clean.includes("ROW-A2"));
   // the clean fixture proves the rules, not the data: same markers, no gaps
   assert.ok(clean.includes("F2P:") && clean.includes("P2P:"));
 });
 
 test("a row missing only F2P files exactly missing-f2p", () => {
-  const r = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| JH-T1 | READY | Match quality | Thing | P2P: `node tools/check.mjs` green | builder | |\n");
+  const r = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| ROW-T1 | READY | Match quality | Thing | P2P: `node tools/check.mjs` green | builder | |\n");
   assert.deepEqual(kinds(r), ["missing-f2p"]);
 });
 
 test("a row missing only P2P files exactly missing-p2p", () => {
-  const r = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| JH-T1 | READY | Match quality | Thing | F2P: `node tools/x.mjs` prints 1 | builder | |\n");
+  const r = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| ROW-T1 | READY | Match quality | Thing | F2P: `node tools/x.mjs` prints 1 | builder | |\n");
   assert.deepEqual(kinds(r), ["missing-p2p"]);
 });
 
 test("empty owner and scorecard cells are filed one by one", () => {
-  const r = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| JH-T1 | READY |  | Thing | F2P: x. P2P: y |  | |\n");
+  const r = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| ROW-T1 | READY |  | Thing | F2P: x. P2P: y |  | |\n");
   assert.deepEqual(kinds(r), ["missing-owner", "missing-scorecard"]);
 });
 
 test("DONE needs evidence, BLOCKED needs a next step; READY needs neither", () => {
-  const done = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| JH-T1 | DONE | Match quality | Thing | F2P: x. P2P: y | builder | |\n");
+  const done = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| ROW-T1 | DONE | Match quality | Thing | F2P: x. P2P: y | builder | |\n");
   assert.deepEqual(kinds(done), ["done-without-evidence"]);
-  const blocked = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| JH-T1 | BLOCKED | Match quality | Thing | F2P: x. P2P: y | builder | |\n");
+  const blocked = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| ROW-T1 | BLOCKED | Match quality | Thing | F2P: x. P2P: y | builder | |\n");
   assert.deepEqual(kinds(blocked), ["blocked-without-next"]);
-  const ready = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| JH-T1 | READY | Match quality | Thing | F2P: x. P2P: y | builder | |\n");
+  const ready = auditText("| ID | Status | Scorecard row | What | Done when | Owner role | Evidence |\n|---|---|---|---|---|---|---|\n| ROW-T1 | READY | Match quality | Thing | F2P: x. P2P: y | builder | |\n");
   assert.deepEqual(ready.defects, []);
 });
 

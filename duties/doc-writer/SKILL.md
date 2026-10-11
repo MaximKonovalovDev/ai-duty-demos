@@ -5,7 +5,7 @@ description: Use when someone hands you a markdown doc or runbook and wants to k
 
 # Doc writer (skill)
 
-When to use: a doc or runbook draft (ours or a donor-shaped one) before it ships or before a DONE is claimed.
+When to use: a doc or runbook draft before it ships or before a DONE is claimed.
 
 Steps:
 

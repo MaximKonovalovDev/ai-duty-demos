@@ -27,7 +27,7 @@ Three checks, one per rule group above.
 - Test: `node --test duties/doc-writer/test.mjs` (planted runbook: 4 defects
   of the expected kinds; clean runbook: 0 findings; temp docs cover the
   120/121 boundary, case-insensitivity, non-runbook exemption and per-section filing).
-- Receipt: `receipt.json`, a run on our real doc `team/fetch.md`, written by
+- Receipt: `receipt.json`, a run on a real doc of the author's own project (the doc is not in this repo), written by
   `node tools/duty.mjs check doc-writer --write-receipt`. The real note keeps
   over-long status lines, so the receipt honestly records open defects instead
   of a clean sheet.
@@ -44,6 +44,3 @@ Three checks, one per rule group above.
 - No model: it is a deterministic core. The agent in `agent.md` adds the judgment
   (which finding blocks a release, what the smallest rewrite is).
 - Text-only gate, no rewrite: it files findings, it never rewrites a sentence.
-  Donors named by the team design: forge `plain_english_check`, center `repomap`
-  (ranked-map idea). Their code was not read and none was copied; the checks
-  here are the generic ones (banned words absent, lines short, sections present).

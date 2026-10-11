@@ -3,9 +3,6 @@
 // Jones): term frequency saturated (k1), length-normalized (b), inverse
 // document frequency over the repo. No model, no embeddings, no network,
 // read only. Files only: it ranks files, it never answers the question.
-// Donor idea: center repomap.mjs (a ranked map over a repo so agents read
-// less). Internal, ideas only: repomap ranks files by commit heat, this ranks
-// them by query score; no donor code was read and none is copied.
 // Usage: node duties/repo-rag/run.mjs <repo-dir> "<query>" [--top N] [--json]
 //        node duties/repo-rag/run.mjs --real --json     (the real target of the receipt)
 import { createHash } from "node:crypto";
@@ -24,7 +21,7 @@ const SKIP_DIRS = new Set(["node_modules", ".git", "archive"]);
 // Three reference queries over our own repo. Each names one file only the
 // right tool file answers (distinctive terms checked against tools/:
 // sourceHash lives in duty.mjs, fit/families scoring in match.mjs,
-// the jh-fetch gate in check.mjs).
+// the fetch gate in check.mjs).
 export const REAL_QUERIES = [
   { q: "which file checks the receipt sourceHash of a duty", top: "tools/duty.mjs" },
   { q: "which tool file matches weights across seven families sorted by score with reasons", top: "tools/match.mjs" },

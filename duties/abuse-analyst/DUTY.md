@@ -34,8 +34,8 @@ kinds only, never log values (no addresses, sessions, bodies or phones).
   all 5 planted signals found one per kind; clean log: 0 findings;
   thresholds hold on synthetic inputs: jittered gaps pass, 3 denies pass,
   one-bucket repetition passes, 7 ids pass).
-- Receipt: `receipt.json`, a run on our real loop log
-  `sprint/loop-keeper.log`, written by
+- Receipt: `receipt.json`, a run on a real service log of the author's own
+  project (the log is not in this repo), written by
   `node tools/duty.mjs check abuse-analyst --write-receipt`.
 
 ## Honest limits
@@ -53,6 +53,3 @@ kinds only, never log values (no addresses, sessions, bodies or phones).
   sends anything. A log from someone else's service is out of scope.
 - No model: it is a deterministic core. The agent in `agent.md` adds the
   judgment (which signal blocks, what the smallest next check is).
-- Donor named by the team design: fp-research `drill` (per-class detection
-  table, human false-positive counting, dated ledger). Its idea was
-  reimplemented for plain timestamped text logs here; 0 lines copied.

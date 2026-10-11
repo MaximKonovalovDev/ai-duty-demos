@@ -33,9 +33,9 @@ Five checks, one per rule group above.
   5 planted defects found one per kind; clean file: 0 findings; temp files cover
   the 120/121 age boundary, case-insensitive near match, empty-email exemption
   and source-untouched clean write).
-- Receipt: `receipt.json`, a run on our real dataset `data/jobs.jsonl` (6543
-  rows: exact id/url dupes already removed upstream, near company+title groups
-  kept by design), written by
+- Receipt: `receipt.json`, a run on a real postings dataset of the author's own
+  project (6543 rows: exact id/url dupes already removed upstream, near
+  company+title groups kept by design; the file is not in this repo), written by
   `node tools/duty.mjs check data-cleaner --write-receipt`.
 
 ## Honest limits
@@ -47,10 +47,7 @@ Five checks, one per rule group above.
 - CSV parsing is header-plus-commas: quoted commas inside a cell are not
   supported (JSONL has no such limit).
 - The jobs real target keeps near dupes on purpose (same title+company recurs
-  across teams with distinct postings, JH-81): the report counts them, the
+  across teams with distinct postings): the report counts them, the
   clean file drops only defective rows.
 - No model: it is a deterministic core. The agent in `agent.md` adds the judgment
   (which finding blocks the import, what the smallest fix is).
-- Donor named by the team design: our `tools/fetch.mjs` dedupeJobs
-  (exact-remove + near-detect, JH-81). Its idea was reimplemented for generic
-  datasets here; 0 lines copied.

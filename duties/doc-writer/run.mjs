@@ -2,9 +2,7 @@
 // Scans markdown docs and runbooks the way the ads ask: plain words (no banned
 // jargon), short lines (wrappable, RTL-safe) and runbooks with Purpose, Steps
 // and Rollback sections so someone else can run them without asking.
-// Donor ideas: forge plain_english_check (jargon plus long-line gate),
-// center repomap (ranked map idea -> per-kind defect counts). Internal,
-// ideas only: no donor code was read and none is copied.
+// Jargon plus long-line gate, with per-kind defect counts.
 // No model, no network, read only. Text-only gate: it files findings, never rewrites.
 // Usage: node duties/doc-writer/run.mjs <doc.md> [--json]
 //        node duties/doc-writer/run.mjs --real --json     (the real target of the receipt)
@@ -14,7 +12,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const REAL_TARGET = "team/fetch.md";
+const REAL_TARGET = "real/runbook.md"; // the author's own doc, not in this repo
 const CHECKS = 3;
 const LONG_LINE = 120;
 

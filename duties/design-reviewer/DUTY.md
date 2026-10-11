@@ -38,26 +38,25 @@ Seven checks, one per rule group above.
 - Test: `node --test duties/design-reviewer/test.mjs` (planted page: 12 lines,
   all 6 planted defects found one per kind on the planted lines; clean page: 0
   findings; temp cases cover the Hebrew dir rule, labelled inputs, token
-  colors, logical CSS and the file entry point).
-- Receipt: `receipt.json`, a run on our real pages
-  `from-design-studio/O-007/page.html` plus `page-en.html` with `cv.css` (2
-  pages, 7 checks, 0 defects: the adopted O-007 layout passes its own review),
-  written by `node tools/duty.mjs check design-reviewer --write-receipt`.
+  colors, logical CSS and the file entry point; the `--real` target, the
+  invented `fixtures/sample-page/`, files its 4 planted defects, one per kind).
+- Receipt: `receipt.json`, an older run (2 pages, 7 checks, 0 defects) on a
+  two-page real layout that was removed from this repo on 2026-10-10. The
+  receipt keeps its counts only, was written by the private project's
+  `tools/duty.mjs` (not in this repo), and does not match the `--real` target
+  above. It has not been re-run on the sample page.
 
 ## Honest limits
 
 - It reads shape, not beauty: a labelled, alted, token-clean page can still
-  look wrong, and contrast ratios are the design-studio audit's job, not this
-  scan's (no luminance math here).
+  look wrong, and contrast ratios are not checked here (no luminance math).
 - Regex over markup, not a parser: pathological nesting or case tricks can
   fool it; the fixtures pin the shapes we claim.
 - Named colors (`red`, `blue`) are not flagged: hex and functions cover what
   our pages actually use.
-- The O-007 real target is clean by construction (the donor audit already
-  gates it): the receipt proves no false alarms on a real Hebrew-first RTL
-  page, the planted fixture proves finding power.
+- The `--real` target is invented and has 4 planted defects on purpose: it
+  proves the tool files findings, not that a real page is clean. The old
+  receipt (0 defects on a Hebrew-first RTL layout) was a no-false-alarm check
+  on a page that is no longer in this repo.
 - No model, no browser: it is a deterministic core. The agent in `agent.md`
   adds the judgment (which finding blocks the ship, what the smallest fix is).
-- Donor named by the team design: design-studio `audit`, `judge` and `tokens`
-  (per-check list, per-kind counts, tokens.css as the only color source). Their
-  ideas were reimplemented for any page of ours; 0 lines copied.

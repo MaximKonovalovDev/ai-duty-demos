@@ -4,7 +4,7 @@
   "command": "node duties/bug-triage/run.mjs --real",
   "target": {
     "kind": "log",
-    "path": "sprint/loop-keeper.log",
+    "path": "[private file]",
     "bytes": 233139,
     "sha256": "20abe2aac7a871fa"
   },
@@ -16,7 +16,7 @@
     "errorPatterns": 4,
     "biggestFamilyLines": 89
   },
-  "summary": "real keeper log: 846 lines, 317 patterns, 107 problem patterns in 19 families; the biggest family is 'waiting: no' with 89 lines (first: line 232); top pattern bt-f897f78d x4",
+  "summary": "real log: 846 lines, 317 patterns, 107 problem patterns in 19 families; the biggest family is 'waiting: no' with 89 lines (first: line 232); top pattern bt-f897f78d x4",
   "tests": {
     "file": "duties/bug-triage/test.mjs",
     "passed": true,

@@ -2,7 +2,7 @@
 // Reads a requirement list (bullets, numbered lines, or a table of bars with proofs), writes test cases for each
 // requirement (positive, negative, boundary values around every number, regression), carries the spec's own
 // F2P/P2P proof lines, and flags requirements nobody can test as written (vague words with no number or example).
-// Donor idea: our board rows (every row carries an F2P and a P2P line). No model, no network, read only.
+// Every board row carries an F2P and a P2P line. No model, no network, read only.
 // Usage: node duties/test-planner/run.mjs <spec.md> [--json]
 //        node duties/test-planner/run.mjs --real --json     (the real target of the receipt)
 import { readFileSync } from "node:fs";
@@ -10,7 +10,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const REAL_TARGET = "FINISH-LINE.md";
+const REAL_TARGET = "real/spec.md"; // the author's own requirements file, not in this repo
 
 const VAGUE = /\b(fast|quick(?:ly)?|slow|easy|easily|simple|user[- ]friendly|intuitive|robust|scalable|flexible|appropriate(?:ly)?|reasonable|as needed|if necessary|etc\.?|and so on|some|several|many|few|good|better|best|efficient(?:ly)?|seamless(?:ly)?|modern|clean|properly|correctly|sufficient|minimal|every day|regularly|soon)\b/i;
 const INCOMPLETE = /\b(tbd|todo|to be decided|to be defined|fill me)\b/i;

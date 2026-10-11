@@ -16,8 +16,10 @@ Steps:
    `hardcoded-color` (move the value into the token file, use `var(--*)`),
    then `physical-css` (switch to the logical property).
 3. A decorative image takes `alt=""`: present and empty is clean, missing is a defect.
-4. The adopted O-007 layout (`from-design-studio/O-007/`) is the reference:
-   `page.html` plus `page-en.html` with `cv.css` scan clean.
+4. The `--real` target is the invented sample page
+   `duties/design-reviewer/fixtures/sample-page/` (`page.html` with `page.css`).
+   It has 4 planted defects on purpose: a clean scan there means the tool broke,
+   not that the page passed.
 
 Not for: judging beauty, contrast ratios or a real screen-reader pass (the scan reads shape, not the eye).
 Test: `node --test duties/design-reviewer/test.mjs`.

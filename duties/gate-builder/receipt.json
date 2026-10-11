@@ -5,7 +5,7 @@
   "target": {
     "kind": "repo",
     "path": "tests",
-    "note": "jobhunt's own node tests, gate written to a temp folder, baseline in a temp file"
+    "note": "the private project's own node tests, gate written to a temp folder, baseline in a temp file"
   },
   "numbers": {
     "steps": 1,
@@ -13,7 +13,7 @@
     "secondRunTests": 353,
     "ratchetBaseline": 353
   },
-  "summary": "real repo jobhunt: detected node-test, gate PASS with 353 tests, second run PASS against the new baseline",
+  "summary": "real repo [private project]: detected node-test, gate PASS with 353 tests, second run PASS against the new baseline",
   "tests": {
     "file": "duties/gate-builder/test.mjs",
     "passed": true,

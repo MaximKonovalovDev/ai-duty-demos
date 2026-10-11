@@ -4,7 +4,7 @@ description: Use when someone gives you a log file after a failure and wants the
 ---
 # Bug triage (skill)
 
-When to use: a log (build, server, editor, loop keeper) with hundreds of lines and a few real problems.
+When to use: a log (build, server, editor, scheduler) with hundreds of lines and a few real problems.
 
 Steps:
 1. `node duties/bug-triage/run.mjs <log> --json` gives `problems` (ranked, with first line, sample, lines before, stack) and `families`.

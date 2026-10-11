@@ -21,7 +21,7 @@ Words in the ads: bug, defect, triage, root cause, incident.
 
 - Test: `node --test duties/bug-triage/test.mjs` (planted log: 9 problem lines collapse to exactly 2 patterns, counts 6 and 3,
   "0 errors" lines are not problems, stack lines attach to the first error; clean log with its known pattern: 0 new).
-- Receipt: `receipt.json`, a run on our real keeper log `sprint/loop-keeper.log` (846 lines), written by
+- Receipt: `receipt.json`, a run on a real service log of the author's own project (846 lines; the log is not in this repo), written by
   `node tools/duty.mjs check bug-triage --write-receipt`.
 
 ## Honest limits
@@ -31,4 +31,3 @@ Words in the ads: bug, defect, triage, root cause, incident.
 - It cannot reproduce a bug. The repro line is a replay hint (where to look and what came before), not a script.
 - Timestamps not at the start of a line are not stripped; a fingerprint can split in two for that reason.
 - No model: it is a deterministic core. The agent in `agent.md` adds the judgment (which finding matters, what to try).
-- Donor named by the team design: forge `log_triage` (fingerprint, dedupe, repro-ready report). Its code was not read and none was copied; the approach here is the generic one (strip what varies, hash the rest, count).

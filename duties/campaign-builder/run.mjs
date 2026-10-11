@@ -2,10 +2,8 @@
 // Builds and gates file-only marketing campaigns the way the ads ask: every link
 // carries UTM (source, medium, campaign, lowercase), no personal data in the files,
 // and visits/sales rows join back to the campaign by UTM (the scoreboard join).
-// Donor ideas: marketing-studio tracking_check (UTM check, no-PII gate; see
-// ../from-marketing-studio/tracking-check.mjs, MIT, same owner) and scoreboard
-// (visits-sales join by UTM, KNOWN only on a UTM re-match). Internal, ideas only:
-// the checks here are the generic ones (UTM present, lowercase, no PII, join counts).
+// The checks are the generic ones (UTM present, lowercase, no PII, join counts); the
+// scoreboard join matches visits and sales by UTM (KNOWN only on a UTM re-match).
 // No model, no network, read only. Files-only: it audits and counts, never posts,
 // never sends, never publishes anything.
 // Usage: node duties/campaign-builder/run.mjs <campaign-dir> [--json]

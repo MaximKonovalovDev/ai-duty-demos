@@ -24,7 +24,7 @@ const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 export async function launch({ timeoutMs = 45000 } = {}) {
   if (typeof WebSocket === "undefined") throw new Error("global WebSocket missing: Node 22+ needed");
-  const dir = mkdtempSync(join(tmpdir(), "jh-browser-"));
+  const dir = mkdtempSync(join(tmpdir(), "demo-browser-"));
   const child = spawn(browserPath(), ["--headless=new", "--disable-gpu", "--no-first-run", "--no-default-browser-check", "--remote-debugging-port=0", `--user-data-dir=${dir}`, "about:blank"], { stdio: "ignore", windowsHide: true });
   let exited = false;
   child.on("exit", () => { exited = true; });

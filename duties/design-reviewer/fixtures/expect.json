@@ -13,5 +13,13 @@
     "lines": 13,
     "defects": 0,
     "note": "the same shape fixed: he plus rtl, title, labelled input, alt present, color via var(--ink), margin-inline-start: zero findings."
+  },
+  "sample": {
+    "dir": "sample-page",
+    "file": "page.html",
+    "css": "page.css",
+    "defects": 4,
+    "kinds": ["hardcoded-color", "missing-alt", "missing-label", "physical-css"],
+    "note": "the --real target: an invented profile page with 4 planted defects, one per kind. page.html: img without alt, email input with placeholder only. page.css: hex color on .tagline, float:left on .portrait."
   }
 }

@@ -5,7 +5,7 @@ description: Use when someone hands you a messy applicant or posting dataset and
 
 # Data cleaner (skill)
 
-When to use: a CSV or JSONL dataset (ours or a donor-shaped one) before it is imported or before a DONE is claimed.
+When to use: a CSV or JSONL dataset before it is imported or before a DONE is claimed.
 
 Steps:
 

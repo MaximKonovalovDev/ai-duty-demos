@@ -4,7 +4,7 @@
   "command": "node duties/abuse-analyst/run.mjs --real",
   "target": {
     "kind": "log",
-    "path": "sprint/loop-keeper.log"
+    "path": "[private file]"
   },
   "numbers": {
     "lines": 1079,
@@ -15,7 +15,7 @@
     "defect_template_reuse": 1,
     "defect_sweep": 1
   },
-  "summary": "real log sprint/loop-keeper.log: 1079 lines, 1079 timestamped, 5 checks, 4 defect(s): machine-rhythm, rate-burst, sweep, template-reuse",
+  "summary": "real log [private file]: 1079 lines, 1079 timestamped, 5 checks, 4 defect(s): machine-rhythm, rate-burst, sweep, template-reuse",
   "tests": {
     "file": "duties/abuse-analyst/test.mjs",
     "passed": true,

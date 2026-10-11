@@ -24,7 +24,7 @@ statistical confidence thresholds).
 - Test: `node --test duties/eval-harness/test.mjs`. Fixtures: 10 cases x 5 runs of a stable system (48 of 50 pass), a degraded
   version (33 of 50: the harness calls REGRESSION, fails the gate, names 9 flaky cases) and a second sample of the stable system
   (46 of 50: no regression, gate passes, no false alarm). Also the Wilson math against known values and every check kind.
-- Receipt: a run on the real judge replies our loops already produced (20 records in `sprint/queue/done`), scored against the
+- Receipt: a run on the real judge replies our loops already produced (20 records from the author's own queue, not in this repo), scored against the
   judge reply contract of this repo (verdict line, at most 15 lines, a revert line, a command, no email or phone), older half
   against newer half. Written by `node tools/duty.mjs check eval-harness --write-receipt`.
 
@@ -35,4 +35,4 @@ statistical confidence thresholds).
 - Checks are structural (format, length, required or forbidden text). It does not judge whether an answer is correct unless a
   case encodes the right answer as a check. An LLM-as-a-judge step would be a second, separate duty.
 - The interval test is conservative: small samples (n under about 20) rarely show a regression even when one is real.
-- Donor ideas: skillworks eval gate, design-studio judge, promptfoo assertion kinds. No code was copied, nothing installed.
+- No outside code was copied and nothing is installed.

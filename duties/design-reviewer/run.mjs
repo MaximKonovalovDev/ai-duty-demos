@@ -4,21 +4,18 @@
 // a Hebrew page rides dir=rtl), design tokens (color only through var(--*),
 // never a hardcoded hex or rgb) and RTL-safe CSS (logical margin-inline and
 // padding-block, never physical margin-left or float:left).
-// Donor ideas: design-studio audit (its per-check list in design-audit.json:
-// tokens parse, no hardcoded colors, rtl dir, logical properties, contrast),
-// design-studio judge (per-kind counts) and tokens.css (the only color source).
-// Internal, ideas only: the checks here are reimplemented for any page of
-// ours; 0 lines copied. No model, no network, no browser, read only.
+// Findings are counted per kind; tokens.css is the only color source.
+// No model, no network, no browser, read only.
 // Usage: node duties/design-reviewer/run.mjs <page.html> [--css <file.css>] [--json]
-//        node duties/design-reviewer/run.mjs --real --json     (the real target of the receipt)
+//        node duties/design-reviewer/run.mjs --real --json     (the --real target: the invented sample page)
 import { createHash } from "node:crypto";
 import { existsSync, readFileSync, statSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const REAL_PAGES = ["from-design-studio/O-007/page.html", "from-design-studio/O-007/page-en.html"];
-const REAL_CSS = "from-design-studio/O-007/cv.css";
+const REAL_PAGES = ["duties/design-reviewer/fixtures/sample-page/page.html"];
+const REAL_CSS = "duties/design-reviewer/fixtures/sample-page/page.css";
 const CHECKS = 7;
 
 const COLOR_RE = /#[0-9a-f]{3,8}\b|\brgba?\s*\(|\bhsla?\s*\(/i;
@@ -90,7 +87,7 @@ function real() {
   return {
     target: { kind: "design", path: REAL_PAGES[0], sha256: createHash("sha256").update(all.map((r) => r.lines).join(",")).digest("hex").slice(0, 16) },
     numbers: { pages: all.length, checks: CHECKS, defects: flat.length, ...byKind },
-    summary: `real pages ${REAL_PAGES[0]} + 1 more with ${REAL_CSS}: ${all.length} pages, ${CHECKS} checks, ${flat.length} defect(s)${flat.length ? `: ${kinds({ defects: flat }).join(", ")}` : ""}`,
+    summary: `sample page ${REAL_PAGES[0]} with ${REAL_CSS}: ${all.length} page(s), ${CHECKS} checks, ${flat.length} defect(s)${flat.length ? `: ${kinds({ defects: flat }).join(", ")}` : ""}`,
   };
 }
 

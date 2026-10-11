@@ -2,9 +2,7 @@
 // Audits CSV/JSONL datasets the way the ads ask: exact + near dupes found,
 // missing fields, bad emails and out-of-range numbers filed per row, then a
 // clean file written beside the source (the source is never touched).
-// Donor ideas: our tools/fetch.mjs dedupeJobs (exact key drops, near key
-// company|title counts but keeps, JH-81). Internal, ideas only: the exact and
-// near keys here are reimplemented for generic datasets, 0 lines copied.
+// An exact key drops a row; a near key (email, company|title, name) is counted and kept.
 // No model, no network, read only (plus the --clean output it writes).
 // Usage: node duties/data-cleaner/run.mjs <dataset.csv|jsonl> [--json] [--clean <out>]
 //        node duties/data-cleaner/run.mjs --real --json     (the real target of the receipt)
@@ -14,7 +12,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const REAL_TARGET = "data/jobs.jsonl";
+const REAL_TARGET = "real/jobs.jsonl"; // the author's own dataset, not in this repo
 const CHECKS = 5;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const AGE_MIN = 0;

@@ -34,4 +34,3 @@ Playwright, Selenium, Cypress, Puppeteer, test automation, automated test, autom
 - It drives the browser through the DevTools protocol directly (about 150 lines in `tools/lib/browser.mjs`), not through Playwright:
   say "browser automation over the DevTools protocol", never "Playwright tests", about this duty.
 - It only opens `file://` pages and localhost. External links are counted, never fetched. It refuses any other host.
-- Donors (ideas only): fp-research real-browser driving, design-studio `audit`. No code was copied.

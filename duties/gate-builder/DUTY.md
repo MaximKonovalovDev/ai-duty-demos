@@ -24,7 +24,7 @@ Words in the ads: CI/CD, continuous integration, GitHub Actions, Jenkins, pipeli
 - Test: `node --test duties/gate-builder/test.mjs`. A repo with 3 tests and a baseline of 3: planted defect 1 (one test file
   deleted, 3 -> 2) is caught by the ratchet, planted defect 2 (a failing test added) is caught by the test step, the clean repo
   passes and a new test raises the baseline to 4. The gate source has no URL, no hosted-CI word and only `node:` imports.
-- Receipt: a run on this repo's own test suite (jobhunt), gate written to a temp folder, baseline in a temp file, written by
+- Receipt: a run on the test suite of the author's own project (private, not included), gate written to a temp folder, baseline in a temp file, written by
   `node tools/duty.mjs check gate-builder --write-receipt`.
 
 ## Honest limits
@@ -33,4 +33,3 @@ Words in the ads: CI/CD, continuous integration, GitHub Actions, Jenkins, pipeli
 - Test counts are read from the runner's summary line (node, pytest, cargo, dotnet). A step without a count is reported and
   the ratchet is skipped for it, never guessed.
 - A baseline file is state: delete it and the ratchet starts over. It belongs in version control with the gate.
-- Donor ideas: factory ratchet, forge quality_ratchet, our tools/check.mjs. No code was copied.

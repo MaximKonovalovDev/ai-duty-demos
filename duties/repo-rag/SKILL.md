@@ -5,7 +5,7 @@ description: Use when someone asks which file of a repo says something and you w
 
 # Repo RAG (skill)
 
-When to use: a "where in the repo" question (ours or a donor-shaped one) before reading big files: rank first, read the top file, quote the passage.
+When to use: a "where in the repo" question before reading big files: rank first, read the top file, quote the passage.
 
 Steps:
 

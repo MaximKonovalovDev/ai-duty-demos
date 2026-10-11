@@ -98,5 +98,7 @@ test("the real target runs as json with pages and checks", () => {
   const r = spawnSync(process.execPath, [join(here, "run.mjs"), "--real", "--json"], { encoding: "utf8" });
   assert.equal(r.status, 0, r.stderr);
   const out = JSON.parse(r.stdout);
-  assert.ok(out.target?.path && out.numbers?.pages === 2 && out.numbers?.checks > 0);
+  assert.ok(out.target?.path && out.numbers?.pages === 1 && out.numbers?.checks > 0);
+  assert.equal(out.numbers.defects, expect.sample.defects, JSON.stringify(out.numbers));
+  for (const k of expect.sample.kinds) assert.equal(out.numbers[`defect_${k.replace(/-/g, "_")}`], 1, k);
 });

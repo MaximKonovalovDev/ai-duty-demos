@@ -45,6 +45,3 @@ Three behaviors, one per rule group above.
   query means nothing next to a 0.2 on another.
 - No model, no embeddings, no network: the agent in `agent.md` adds the
   judgment (read the top file, quote the passage, say when to ask the owner).
-  Donor named by the team design: center `repomap` (a ranked map over a repo
-  so agents read less). Its code was not read and none was copied; repomap
-  ranks files by commit heat, this ranks them by query score.

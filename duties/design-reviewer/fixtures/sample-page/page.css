@@ -1,0 +1,4 @@
+/* sample page: all names invented; its defects are planted on purpose, see fixtures/expect.json */
+.page { max-width: 36em; margin-inline: auto; padding-block: 2rem; font-family: sans-serif; color: var(--ink); }
+.tagline { color: #333333; }
+.portrait { float: left; width: 120px; margin-inline-end: 1rem; }

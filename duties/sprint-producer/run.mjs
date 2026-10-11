@@ -2,7 +2,7 @@
 // Audits a roadmap/backlog/sprint board file the way the ads ask: every row names
 // its scorecard row and owner, carries runnable F2P plus P2P proof lines, DONE rows
 // carry evidence, BLOCKED rows carry a reason or next step.
-// Donor ideas: center loopkit_new, vision-check. No model, no network, read only.
+// No model, no network, read only.
 // Usage: node duties/sprint-producer/run.mjs <board.md> [--json]
 //        node duties/sprint-producer/run.mjs --real --json     (the real target of the receipt)
 import { createHash } from "node:crypto";
@@ -11,7 +11,7 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..", "..");
-const REAL_TARGET = "sprint/board.md";
+const REAL_TARGET = "real/board.md"; // the author's own board, not in this repo
 const CHECKS = 6;
 
 /** Parse the board table. -> [{ id, status, scorecard, what, doneWhen, owner, evidence, line }] */

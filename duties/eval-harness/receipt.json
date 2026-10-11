@@ -4,7 +4,7 @@
   "command": "node duties/eval-harness/run.mjs --real",
   "target": {
     "kind": "dir",
-    "path": "sprint/queue/done",
+    "path": "[private file]",
     "note": "the judge replies our loops already produced (local queue records), scored against the judge reply contract; names and text stay out of the receipt"
   },
   "numbers": {
